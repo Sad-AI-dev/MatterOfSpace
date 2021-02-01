@@ -1,0 +1,91 @@
+\hypertarget{class_g_x_p_engine_1_1_canvas}{}\doxysection{G\+X\+P\+Engine.\+Canvas Class Reference}
+\label{class_g_x_p_engine_1_1_canvas}\index{GXPEngine.Canvas@{GXPEngine.Canvas}}
+
+
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_canvas}{Canvas}} object can be used for drawing 2D visuals at runtime.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Canvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_g_x_p_engine_1_1_canvas}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_canvas_a7c15616bfbc66c61e2fbc47e3915c255}{Canvas}} (int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}}, bool add\+Collider=true)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_canvas}{Canvas}} class. It is a regular \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} that can be added to any displaylist via commands such as Add\+Child. It contains a \href{http://msdn.microsoft.com/en-us/library/system.drawing.graphics(v=vs.110).aspx}{\texttt{ System.\+Drawing.\+Graphics}} component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_abe82fb5c1639ed3632cf8bb85166279b}\label{class_g_x_p_engine_1_1_canvas_abe82fb5c1639ed3632cf8bb85166279b}} 
+{\bfseries Canvas} (System.\+Drawing.\+Bitmap bitmap, bool add\+Collider=true)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_a9ce35543a954fd7b56f796885be7e8e8}\label{class_g_x_p_engine_1_1_canvas_a9ce35543a954fd7b56f796885be7e8e8}} 
+{\bfseries Canvas} (string filename, bool add\+Collider=true)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_a3377ea104cca2871e0b0981a10087997}\label{class_g_x_p_engine_1_1_canvas_a3377ea104cca2871e0b0981a10087997}} 
+void {\bfseries Draw\+Sprite} (\mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}} sprite)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_a919698e6fb1f43c593c57b97004e79b8}\label{class_g_x_p_engine_1_1_canvas_a919698e6fb1f43c593c57b97004e79b8}} 
+override void {\bfseries Render\+Self} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_a7ef26f5054d07b18089363de79e16c4d}\label{class_g_x_p_engine_1_1_canvas_a7ef26f5054d07b18089363de79e16c4d}} 
+Graphics {\bfseries \+\_\+graphics}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_af491f9a90c479b83e87ce8ea81c492ee}\label{class_g_x_p_engine_1_1_canvas_af491f9a90c479b83e87ce8ea81c492ee}} 
+bool {\bfseries \+\_\+invalidate} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Graphics \mbox{\hyperlink{class_g_x_p_engine_1_1_canvas_a6b7d825e2fd192094d0e1674c17844dd}{graphics}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the graphics component. This interface provides tools to draw on the sprite. See\+: \href{http://msdn.microsoft.com/en-us/library/system.drawing.graphics(v=vs.110).aspx}{\texttt{ System.\+Drawing.\+Graphics}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_canvas}{Canvas}} object can be used for drawing 2D visuals at runtime. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_a7c15616bfbc66c61e2fbc47e3915c255}\label{class_g_x_p_engine_1_1_canvas_a7c15616bfbc66c61e2fbc47e3915c255}} 
+\index{GXPEngine.Canvas@{GXPEngine.Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!GXPEngine.Canvas@{GXPEngine.Canvas}}
+\doxysubsubsection{\texorpdfstring{Canvas()}{Canvas()}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Canvas.\+Canvas (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{bool}]{add\+Collider = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_canvas}{Canvas}} class. It is a regular \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} that can be added to any displaylist via commands such as Add\+Child. It contains a \href{http://msdn.microsoft.com/en-us/library/system.drawing.graphics(v=vs.110).aspx}{\texttt{ System.\+Drawing.\+Graphics}} component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the canvas in pixels. \\
+\hline
+{\em height} & Height of the canvas in pixels. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_canvas_a6b7d825e2fd192094d0e1674c17844dd}\label{class_g_x_p_engine_1_1_canvas_a6b7d825e2fd192094d0e1674c17844dd}} 
+\index{GXPEngine.Canvas@{GXPEngine.Canvas}!graphics@{graphics}}
+\index{graphics@{graphics}!GXPEngine.Canvas@{GXPEngine.Canvas}}
+\doxysubsubsection{\texorpdfstring{graphics}{graphics}}
+{\footnotesize\ttfamily Graphics G\+X\+P\+Engine.\+Canvas.\+graphics\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the graphics component. This interface provides tools to draw on the sprite. See\+: \href{http://msdn.microsoft.com/en-us/library/system.drawing.graphics(v=vs.110).aspx}{\texttt{ System.\+Drawing.\+Graphics}} 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/Canvas.\+cs\end{DoxyCompactItemize}

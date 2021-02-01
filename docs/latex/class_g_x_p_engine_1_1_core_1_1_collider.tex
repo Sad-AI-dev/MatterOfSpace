@@ -1,0 +1,44 @@
+\hypertarget{class_g_x_p_engine_1_1_core_1_1_collider}{}\doxysection{G\+X\+P\+Engine.\+Core.\+Collider Class Reference}
+\label{class_g_x_p_engine_1_1_core_1_1_collider}\index{GXPEngine.Core.Collider@{GXPEngine.Core.Collider}}
+Inheritance diagram for G\+X\+P\+Engine.\+Core.\+Collider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_x_p_engine_1_1_core_1_1_collider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_core_1_1_collider_a5820ea1178e35461210bcb59cdecefac}\label{class_g_x_p_engine_1_1_core_1_1_collider_a5820ea1178e35461210bcb59cdecefac}} 
+virtual bool {\bfseries Hit\+Test} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} other)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_core_1_1_collider_aa6636ce9b1da044e1bc8f826f7341684}\label{class_g_x_p_engine_1_1_core_1_1_collider_aa6636ce9b1da044e1bc8f826f7341684}} 
+virtual bool {\bfseries Hit\+Test\+Point} (float x, float y)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_core_1_1_collider_aaf1bf556126cdfcea372b8486234a0da}\label{class_g_x_p_engine_1_1_core_1_1_collider_aaf1bf556126cdfcea372b8486234a0da}} 
+virtual float {\bfseries Time\+Of\+Impact} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} other, float vx, float vy, out \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} normal)
+\item 
+virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider_a54ceccb530b88332c456ca76c3a730bc}{Get\+Collision\+Info}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} other)
+\begin{DoxyCompactList}\small\item\em If this collider and the collider other are overlapping, this method returns useful collision info such as the collision normal, the point of impact, and the penetration depth, contained in a \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} object (the time of impact field will always be zero). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_core_1_1_collider_a54ceccb530b88332c456ca76c3a730bc}\label{class_g_x_p_engine_1_1_core_1_1_collider_a54ceccb530b88332c456ca76c3a730bc}} 
+\index{GXPEngine.Core.Collider@{GXPEngine.Core.Collider}!GetCollisionInfo@{GetCollisionInfo}}
+\index{GetCollisionInfo@{GetCollisionInfo}!GXPEngine.Core.Collider@{GXPEngine.Core.Collider}}
+\doxysubsubsection{\texorpdfstring{GetCollisionInfo()}{GetCollisionInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} G\+X\+P\+Engine.\+Core.\+Collider.\+Get\+Collision\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+If this collider and the collider other are overlapping, this method returns useful collision info such as the collision normal, the point of impact, and the penetration depth, contained in a \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} object (the time of impact field will always be zero). 
+
+If they are not overlapping, this method returns null.
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_box_collider_aae414287158cdbe743f1f448ecd5cc48}{G\+X\+P\+Engine.\+Core.\+Box\+Collider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Core/Collider.\+cs\end{DoxyCompactItemize}

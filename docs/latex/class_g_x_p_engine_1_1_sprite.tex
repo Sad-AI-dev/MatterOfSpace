@@ -1,0 +1,282 @@
+\hypertarget{class_g_x_p_engine_1_1_sprite}{}\doxysection{G\+X\+P\+Engine.\+Sprite Class Reference}
+\label{class_g_x_p_engine_1_1_sprite}\index{GXPEngine.Sprite@{GXPEngine.Sprite}}
+
+
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}} class holds 2D images that can be used as objects in your game.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_g_x_p_engine_1_1_sprite}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a22b8dd09f5a35aa1a869ad37c995f3e5}{Sprite}} (System.\+Drawing.\+Bitmap bitmap, bool add\+Collider=true)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{G\+X\+P\+Engine.\+Sprite}} class. Specify a System.\+Drawing.\+Bitmap to use. Bitmaps will not be cached. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_ac4e833f3e5fd010030fdbd1f55359a40}{Sprite}} (string filename, bool keep\+In\+Cache=false, bool add\+Collider=true)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{G\+X\+P\+Engine.\+Sprite}} class. Specify an image file to load. Please use a full filename. Initial path is the application folder. Images will be cached internally. That means once it is loaded, the same data will be used when you load the file again. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a53815903035f9af8f3fbc0f5722c2a82}{Get\+Extents}} ()
+\begin{DoxyCompactList}\small\item\em Gets the four corners of this object as a set of 4 Vector2s. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a7f23dfc233b1a22c92ca548a5a6e7efc}{Set\+Origin}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Sets the origin, the pivot point of this \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}} in pixels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a5ff2021646a5856160057e33bfa0662e}{Mirror}} (bool mirrorX, bool mirrorY)
+\begin{DoxyCompactList}\small\item\em This function can be used to enable mirroring for the sprite in either x or y direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a1273156710bcf4143a80147a721a696d}{Set\+Color}} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Sets the color of the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a633829402168cad278072cfa235a21b6}\label{class_g_x_p_engine_1_1_sprite_a633829402168cad278072cfa235a21b6}} 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode}{Blend\+Mode}} {\bfseries blend\+Mode} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a904f0f96975bc4419fd1e52f1199b1e8}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Subclasses can implement this method to clean up resources once on destruction. Will be called by the engine when the game object is destroyed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a4d82a7f6f77eda6f1dae56ac09c70de0}\label{class_g_x_p_engine_1_1_sprite_a4d82a7f6f77eda6f1dae56ac09c70de0}} 
+void {\bfseries initialize\+From\+Texture} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_texture2_d}{Texture2D}} \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a48c7dbc7d4d7903e23e23ee42f934df6}{texture}})
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a49accf27904ee8aee9cce21ba02d635b}\label{class_g_x_p_engine_1_1_sprite_a49accf27904ee8aee9cce21ba02d635b}} 
+virtual void {\bfseries set\+U\+Vs} ()
+\item 
+override \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_adbd7ebed1c5bc794e134ba914f37bfb6}{create\+Collider}} ()
+\begin{DoxyCompactList}\small\item\em Create and return a collider to use for this game object. Null is allowed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a011ce140e66fec8f18e10e19953a9b75}\label{class_g_x_p_engine_1_1_sprite_a011ce140e66fec8f18e10e19953a9b75}} 
+override void {\bfseries Render\+Self} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_acc3593d46a31e62a5ffd1f23731a769e}\label{class_g_x_p_engine_1_1_sprite_acc3593d46a31e62a5ffd1f23731a769e}} 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_texture2_d}{Texture2D}} {\bfseries \+\_\+texture}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a275bc85dedc48536c6191c62bbf95111}\label{class_g_x_p_engine_1_1_sprite_a275bc85dedc48536c6191c62bbf95111}} 
+\mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_rectangle}{Rectangle}} {\bfseries \+\_\+bounds}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_af405d458fa11036a63267c69f243bdbe}\label{class_g_x_p_engine_1_1_sprite_af405d458fa11036a63267c69f243bdbe}} 
+float\mbox{[}$\,$\mbox{]} {\bfseries \+\_\+uvs}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_aabd6c90fc28c4a190ad0077dac9ba6ba}\label{class_g_x_p_engine_1_1_sprite_aabd6c90fc28c4a190ad0077dac9ba6ba}} 
+bool {\bfseries \+\_\+mirrorX} = false
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a1266faae1d8014d66f933fa66db9e0d9}\label{class_g_x_p_engine_1_1_sprite_a1266faae1d8014d66f933fa66db9e0d9}} 
+bool {\bfseries \+\_\+mirrorY} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_texture2_d}{Texture2D}} \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a48c7dbc7d4d7903e23e23ee42f934df6}{texture}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the texture that is used to create this sprite. If no texture is used, null will be returned. Use this to retreive the original width/height or filename of the texture. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the sprite\textquotesingle{}s width in pixels. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the sprite\textquotesingle{}s height in pixels. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6cf62404b2bca9e8eedcff197e8e594c}{color}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the color filter for this sprite. This can be any value between 0x000000 and 0x\+F\+F\+F\+F\+FF. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the alpha value of the sprite. Setting this value allows you to make the sprite (semi-\/)transparent. The alpha value should be in the range 0...1, where 0 is fully transparent and 1 is fully opaque. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}} class holds 2D images that can be used as objects in your game. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a22b8dd09f5a35aa1a869ad37c995f3e5}\label{class_g_x_p_engine_1_1_sprite_a22b8dd09f5a35aa1a869ad37c995f3e5}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Sprite.\+Sprite (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Bitmap}]{bitmap,  }\item[{bool}]{add\+Collider = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{G\+X\+P\+Engine.\+Sprite}} class. Specify a System.\+Drawing.\+Bitmap to use. Bitmaps will not be cached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bitmap} & Bitmap. \\
+\hline
+{\em add\+Collider} & If {\ttfamily true}, this sprite will have a collider that will be added to the collision manager. \\
+\hline
+\end{DoxyParams}
+~\newline
+ \mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_ac4e833f3e5fd010030fdbd1f55359a40}\label{class_g_x_p_engine_1_1_sprite_ac4e833f3e5fd010030fdbd1f55359a40}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Sprite.\+Sprite (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{bool}]{keep\+In\+Cache = {\ttfamily false},  }\item[{bool}]{add\+Collider = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{G\+X\+P\+Engine.\+Sprite}} class. Specify an image file to load. Please use a full filename. Initial path is the application folder. Images will be cached internally. That means once it is loaded, the same data will be used when you load the file again. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file that should be loaded. \\
+\hline
+{\em keep\+In\+Cache} & If {\ttfamily true}, the sprite\textquotesingle{}s texture will be kept in memory for the entire lifetime of the game. This takes up more memory, but removes load times. \\
+\hline
+{\em add\+Collider} & If {\ttfamily true}, this sprite will have a collider that will be added to the collision manager. \\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_adbd7ebed1c5bc794e134ba914f37bfb6}\label{class_g_x_p_engine_1_1_sprite_adbd7ebed1c5bc794e134ba914f37bfb6}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!createCollider@{createCollider}}
+\index{createCollider@{createCollider}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{createCollider()}{createCollider()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} G\+X\+P\+Engine.\+Sprite.\+create\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create and return a collider to use for this game object. Null is allowed. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a8661d08cf5a831e3d5d0aadd9da968c4}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a53815903035f9af8f3fbc0f5722c2a82}\label{class_g_x_p_engine_1_1_sprite_a53815903035f9af8f3fbc0f5722c2a82}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!GetExtents@{GetExtents}}
+\index{GetExtents@{GetExtents}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{GetExtents()}{GetExtents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{[}$\,$\mbox{]} G\+X\+P\+Engine.\+Sprite.\+Get\+Extents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the four corners of this object as a set of 4 Vector2s. 
+
+\begin{DoxyReturn}{Returns}
+The extents. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a5ff2021646a5856160057e33bfa0662e}\label{class_g_x_p_engine_1_1_sprite_a5ff2021646a5856160057e33bfa0662e}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!Mirror@{Mirror}}
+\index{Mirror@{Mirror}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{Mirror()}{Mirror()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Sprite.\+Mirror (\begin{DoxyParamCaption}\item[{bool}]{mirrorX,  }\item[{bool}]{mirrorY }\end{DoxyParamCaption})}
+
+
+
+This function can be used to enable mirroring for the sprite in either x or y direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mirrorX} & If set to {\ttfamily true} to enable mirroring in x direction. \\
+\hline
+{\em mirrorY} & If set to {\ttfamily true} to enable mirroring in y direction. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a904f0f96975bc4419fd1e52f1199b1e8}\label{class_g_x_p_engine_1_1_sprite_a904f0f96975bc4419fd1e52f1199b1e8}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily override void G\+X\+P\+Engine.\+Sprite.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses can implement this method to clean up resources once on destruction. Will be called by the engine when the game object is destroyed. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a7010eb7e2495dbcdfc93094176e04a00}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a1273156710bcf4143a80147a721a696d}\label{class_g_x_p_engine_1_1_sprite_a1273156710bcf4143a80147a721a696d}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Sprite.\+Set\+Color (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})}
+
+
+
+Sets the color of the sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The red component, range 0..1 \\
+\hline
+{\em g} & The green component, range 0..1 \\
+\hline
+{\em b} & The blue component, range 0..1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a7f23dfc233b1a22c92ca548a5a6e7efc}\label{class_g_x_p_engine_1_1_sprite_a7f23dfc233b1a22c92ca548a5a6e7efc}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!SetOrigin@{SetOrigin}}
+\index{SetOrigin@{SetOrigin}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{SetOrigin()}{SetOrigin()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Sprite.\+Set\+Origin (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Sets the origin, the pivot point of this \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}} in pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}\label{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!alpha@{alpha}}
+\index{alpha@{alpha}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Sprite.\+alpha\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the alpha value of the sprite. Setting this value allows you to make the sprite (semi-\/)transparent. The alpha value should be in the range 0...1, where 0 is fully transparent and 1 is fully opaque. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a6cf62404b2bca9e8eedcff197e8e594c}\label{class_g_x_p_engine_1_1_sprite_a6cf62404b2bca9e8eedcff197e8e594c}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!color@{color}}
+\index{color@{color}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily uint G\+X\+P\+Engine.\+Sprite.\+color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the color filter for this sprite. This can be any value between 0x000000 and 0x\+F\+F\+F\+F\+FF. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}\label{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!height@{height}}
+\index{height@{height}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily virtual int G\+X\+P\+Engine.\+Sprite.\+height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the sprite\textquotesingle{}s height in pixels. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a48c7dbc7d4d7903e23e23ee42f934df6}\label{class_g_x_p_engine_1_1_sprite_a48c7dbc7d4d7903e23e23ee42f934df6}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!texture@{texture}}
+\index{texture@{texture}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_texture2_d}{Texture2D}} G\+X\+P\+Engine.\+Sprite.\+texture\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the texture that is used to create this sprite. If no texture is used, null will be returned. Use this to retreive the original width/height or filename of the texture. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}\label{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}} 
+\index{GXPEngine.Sprite@{GXPEngine.Sprite}!width@{width}}
+\index{width@{width}!GXPEngine.Sprite@{GXPEngine.Sprite}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily virtual int G\+X\+P\+Engine.\+Sprite.\+width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the sprite\textquotesingle{}s width in pixels. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/Sprite.\+cs\end{DoxyCompactItemize}

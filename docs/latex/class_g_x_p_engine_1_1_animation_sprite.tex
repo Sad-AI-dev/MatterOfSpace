@@ -1,0 +1,197 @@
+\hypertarget{class_g_x_p_engine_1_1_animation_sprite}{}\doxysection{G\+X\+P\+Engine.\+Animation\+Sprite Class Reference}
+\label{class_g_x_p_engine_1_1_animation_sprite}\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+
+
+Animated \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}}. Has all the functionality of a regular sprite, but supports multiple animation frames/subimages.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Animation\+Sprite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_g_x_p_engine_1_1_animation_sprite}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_acc0836c2e802302a4110acb459bcdb69}{Animation\+Sprite}} (string filename, int cols, int rows, int frames=-\/1, bool keep\+In\+Cache=false, bool add\+Collider=true)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_anim_sprite}{G\+X\+P\+Engine.\+Anim\+Sprite}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_a7589d60a00303ebb60e0a24769ae88a9}{Animation\+Sprite}} (System.\+Drawing.\+Bitmap bitmap, int cols, int rows, int frames=-\/1, bool add\+Collider=true)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_anim_sprite}{G\+X\+P\+Engine.\+Anim\+Sprite}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_ac1814eb56833aacf3ef62a93ed714fdd}{Set\+Frame}} (int frame)
+\begin{DoxyCompactList}\small\item\em Sets the current animation frame. Frame should be in range 0...frame\+Count-\/1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_acfbbf3c0cefeb86eab1ed5a567547177}{Next\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Goes to the next frame. At the end of the animation, it jumps back to the first frame. (It loops) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_af011b91209d69c0e2aab0f955a461a35}\label{class_g_x_p_engine_1_1_animation_sprite_af011b91209d69c0e2aab0f955a461a35}} 
+void {\bfseries initialize\+Anim\+Frames} (int cols, int rows, int frames=-\/1)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_adb7d11dd6f8d05c37fb624a54266ce78}\label{class_g_x_p_engine_1_1_animation_sprite_adb7d11dd6f8d05c37fb624a54266ce78}} 
+override void {\bfseries set\+U\+Vs} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_aa91f87aa054de967413882773e62dd37}\label{class_g_x_p_engine_1_1_animation_sprite_aa91f87aa054de967413882773e62dd37}} 
+float {\bfseries \+\_\+frame\+Width}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_a67216ef738016e91e2240cf3703ad61b}\label{class_g_x_p_engine_1_1_animation_sprite_a67216ef738016e91e2240cf3703ad61b}} 
+float {\bfseries \+\_\+frame\+Height}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_afba08ba1fcf02aa3ca6d4f52367e61ec}\label{class_g_x_p_engine_1_1_animation_sprite_afba08ba1fcf02aa3ca6d4f52367e61ec}} 
+int {\bfseries \+\_\+cols}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_af2967c187ede2f6682fd96f6679efbf5}\label{class_g_x_p_engine_1_1_animation_sprite_af2967c187ede2f6682fd96f6679efbf5}} 
+int {\bfseries \+\_\+frames}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_a5737d6a0d9bcadd1e69f0ea0532ff211}\label{class_g_x_p_engine_1_1_animation_sprite_a5737d6a0d9bcadd1e69f0ea0532ff211}} 
+int {\bfseries \+\_\+current\+Frame}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_a9c91d7d8f7f4683e9822b64f130a78d8}{width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the sprite\textquotesingle{}s width in pixels. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_abce191963ebfa78df33cb30ac305bd02}{height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the sprite\textquotesingle{}s height in pixels. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_a6b798ae687736031661d59764ccb0fb3}{current\+Frame}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current frame. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_x_p_engine_1_1_animation_sprite_ad401433df0638d3b5bd06c0a3fd7d063}{frame\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the number of frames in this animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Animated \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite}{Sprite}}. Has all the functionality of a regular sprite, but supports multiple animation frames/subimages. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_acc0836c2e802302a4110acb459bcdb69}\label{class_g_x_p_engine_1_1_animation_sprite_acc0836c2e802302a4110acb459bcdb69}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!AnimationSprite@{AnimationSprite}}
+\index{AnimationSprite@{AnimationSprite}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{AnimationSprite()}{AnimationSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Animation\+Sprite.\+Animation\+Sprite (\begin{DoxyParamCaption}\item[{string}]{filename,  }\item[{int}]{cols,  }\item[{int}]{rows,  }\item[{int}]{frames = {\ttfamily -\/1},  }\item[{bool}]{keep\+In\+Cache = {\ttfamily false},  }\item[{bool}]{add\+Collider = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_anim_sprite}{G\+X\+P\+Engine.\+Anim\+Sprite}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to be loaded. Files are cached internally. Texture sizes should be a power of two\+: 1, 2, 4, 8, 16, 32, 64 etc. The width and height don\textquotesingle{}t need to be the same. If you want to load transparent sprites, use .P\+NG with transparency. \\
+\hline
+{\em cols} & Number of columns in the animation. \\
+\hline
+{\em rows} & Number of rows in the animation. \\
+\hline
+{\em frames} & Optionally, indicate a number of frames. When left blank, defaults to width$\ast$height. \\
+\hline
+{\em keep\+In\+Cache} & If {\ttfamily true}, the sprite\textquotesingle{}s texture will be kept in memory for the entire lifetime of the game. This takes up more memory, but removes load times. \\
+\hline
+{\em add\+Collider} & If {\ttfamily true}, this sprite will have a collider that will be added to the collision manager. \\
+\hline
+\end{DoxyParams}
+~\newline
+ \mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_a7589d60a00303ebb60e0a24769ae88a9}\label{class_g_x_p_engine_1_1_animation_sprite_a7589d60a00303ebb60e0a24769ae88a9}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!AnimationSprite@{AnimationSprite}}
+\index{AnimationSprite@{AnimationSprite}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{AnimationSprite()}{AnimationSprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Animation\+Sprite.\+Animation\+Sprite (\begin{DoxyParamCaption}\item[{System.\+Drawing.\+Bitmap}]{bitmap,  }\item[{int}]{cols,  }\item[{int}]{rows,  }\item[{int}]{frames = {\ttfamily -\/1},  }\item[{bool}]{add\+Collider = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_anim_sprite}{G\+X\+P\+Engine.\+Anim\+Sprite}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bitmap} & The Bitmap object to be used to create the sprite. Texture sizes should be a power of two\+: 1, 2, 4, 8, 16, 32, 64 etc. The width and height don\textquotesingle{}t need to be the same. If you want to load transparent sprites, use .P\+NG with transparency. \\
+\hline
+{\em cols} & Number of columns in the animation. \\
+\hline
+{\em rows} & Number of rows in the animation. \\
+\hline
+{\em frames} & Optionally, indicate a number of frames. When left blank, defaults to width$\ast$height. \\
+\hline
+{\em add\+Collider} & If {\ttfamily true}, this sprite will have a collider that will be added to the collision manager. \\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_acfbbf3c0cefeb86eab1ed5a567547177}\label{class_g_x_p_engine_1_1_animation_sprite_acfbbf3c0cefeb86eab1ed5a567547177}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!NextFrame@{NextFrame}}
+\index{NextFrame@{NextFrame}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{NextFrame()}{NextFrame()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Animation\+Sprite.\+Next\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Goes to the next frame. At the end of the animation, it jumps back to the first frame. (It loops) 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_ac1814eb56833aacf3ef62a93ed714fdd}\label{class_g_x_p_engine_1_1_animation_sprite_ac1814eb56833aacf3ef62a93ed714fdd}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!SetFrame@{SetFrame}}
+\index{SetFrame@{SetFrame}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{SetFrame()}{SetFrame()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Animation\+Sprite.\+Set\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame }\end{DoxyParamCaption})}
+
+
+
+Sets the current animation frame. Frame should be in range 0...frame\+Count-\/1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & Frame. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_a6b798ae687736031661d59764ccb0fb3}\label{class_g_x_p_engine_1_1_animation_sprite_a6b798ae687736031661d59764ccb0fb3}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!currentFrame@{currentFrame}}
+\index{currentFrame@{currentFrame}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{currentFrame}{currentFrame}}
+{\footnotesize\ttfamily int G\+X\+P\+Engine.\+Animation\+Sprite.\+current\+Frame\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns the current frame. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_ad401433df0638d3b5bd06c0a3fd7d063}\label{class_g_x_p_engine_1_1_animation_sprite_ad401433df0638d3b5bd06c0a3fd7d063}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!frameCount@{frameCount}}
+\index{frameCount@{frameCount}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{frameCount}{frameCount}}
+{\footnotesize\ttfamily int G\+X\+P\+Engine.\+Animation\+Sprite.\+frame\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the number of frames in this animation. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_abce191963ebfa78df33cb30ac305bd02}\label{class_g_x_p_engine_1_1_animation_sprite_abce191963ebfa78df33cb30ac305bd02}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!height@{height}}
+\index{height@{height}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily override int G\+X\+P\+Engine.\+Animation\+Sprite.\+height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the sprite\textquotesingle{}s height in pixels. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_animation_sprite_a9c91d7d8f7f4683e9822b64f130a78d8}\label{class_g_x_p_engine_1_1_animation_sprite_a9c91d7d8f7f4683e9822b64f130a78d8}} 
+\index{GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}!width@{width}}
+\index{width@{width}!GXPEngine.AnimationSprite@{GXPEngine.AnimationSprite}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily override int G\+X\+P\+Engine.\+Animation\+Sprite.\+width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the sprite\textquotesingle{}s width in pixels. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/Animation\+Sprite.\+cs\end{DoxyCompactItemize}

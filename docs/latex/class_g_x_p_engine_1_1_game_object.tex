@@ -1,0 +1,537 @@
+\hypertarget{class_g_x_p_engine_1_1_game_object}{}\doxysection{G\+X\+P\+Engine.\+Game\+Object Class Reference}
+\label{class_g_x_p_engine_1_1_game_object}\index{GXPEngine.GameObject@{GXPEngine.GameObject}}
+
+
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} is the base class for all display objects.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{class_g_x_p_engine_1_1_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_ae06d36ed14650ce3a1037ae455d1b18d}{Game\+Object}} (bool add\+Collider=false)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{G\+X\+P\+Engine.\+Game\+Object}} class. Since Game\+Objects contain a display hierarchy, a \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} can be used as a container for other objects. Other objects can be added using child commands as Add\+Child. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_aa55ad32321703f3226fcc601e7f28823}{Get\+Collisions}} ()
+\begin{DoxyCompactList}\small\item\em Get all a list of all objects that currently overlap this one. Calling this method will test collisions between this object and all other colliders in the scene. It can be called mid-\/step and is included for convenience, not performance. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a442d88867c7be365abe6d73f9de7b923}{Render}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\begin{DoxyCompactList}\small\item\em This function is called by the renderer. You can override it to change this object\textquotesingle{}s rendering behaviour. When not inside the \mbox{\hyperlink{namespace_g_x_p_engine}{G\+X\+P\+Engine}} package, specify the parameter as \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+X\+P\+Engine.\+Core.\+G\+L\+Context}}. This function was made public to accomodate split screen rendering. Use Set\+View\+Port for that. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_abf501534accfc6cb1295df5f0818b443}{Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroy this instance, and removes it from the game. To complete garbage collection, you must nullify all your own references to this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_ac6ee0a9675d1a13231d1e393fafe4ccc}{Late\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroy this instance, and removes it from the game, {\itshape after} finishing the current Update + On\+Collision loops. To complete garbage collection, you must nullify all your own references to this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_ad213f53039f4a78d03e1e81d1b00ed55}{Add\+Child}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child)
+\begin{DoxyCompactList}\small\item\em Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a386aa1012b728347832ff41b33961317}{Late\+Add\+Child}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child)
+\begin{DoxyCompactList}\small\item\em Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this one, {\itshape after} finishing the current Update + On\+Collision loops. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a2259fbe1fef900a7d5527da951934efa}{Remove}} ()
+\begin{DoxyCompactList}\small\item\em Removes this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} from the hierarchy (=sets the parent to null). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a09b4049293b0124024375e327de16bbf}{Late\+Remove}} ()
+\begin{DoxyCompactList}\small\item\em Removes this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} from the hierarchy, {\itshape after} finishing the current Update + On\+Collision loops. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a6dd2b18321681958c92110b4b6162efc}{Remove\+Child}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child)
+\begin{DoxyCompactList}\small\item\em Removes the specified child \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} from this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a407f9f417afaef615fba9852c7c4121d}{Add\+Child\+At}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child, int index)
+\begin{DoxyCompactList}\small\item\em Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this object at an specified index. This will alter the position of other objects as well. You can use this to determine the draw order of child objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_aea006c98b23ab199862b2369436a3f2e}{Late\+Add\+Child\+At}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child, int index)
+\begin{DoxyCompactList}\small\item\em Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this one, at the specified index, {\itshape after} finishing the current Update + On\+Collision loops. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_ac512360126ccc3e0a34be7c884eb66fb}{Has\+Child}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} game\+Object)
+\begin{DoxyCompactList}\small\item\em Returns \textquotesingle{}true\textquotesingle{} if the specified object is a descendant of this object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_ac86698b7fc977350b80ebfeabbf0f03a}{In\+Hierarchy}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether this game object is currently active, or equivalently, a descendant of \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}}. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a43e343df6e497131e64f9b755e7093f8}{Get\+Children}} ()
+\begin{DoxyCompactList}\small\item\em Returns a list of all children that belong to this object. The function returns System.\+Collections.\+Generic.\+List$<$\+Game\+Object$>$. N\+O\+TE\+: Never change this list directly yourself! \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_aee5eda02a379782f6a1a6034c178fe71}{Set\+Child\+Index}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child, int index)
+\begin{DoxyCompactList}\small\item\em Inserts the specified object in this object\textquotesingle{}s child list at given location. This will alter the position of other objects as well. You can use this to determine the drawing order of child objects. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a2e79de9a6e6c3d8ef40e4e9d8183a5e5}{Hit\+Test}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} other)
+\begin{DoxyCompactList}\small\item\em Tests if this object overlaps with the one specified. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a74d97832cabf7232e1ab1ca865631256}{Time\+Of\+Impact}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} other, float vx, float vy, out \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} normal)
+\begin{DoxyCompactList}\small\item\em If changing the x and y coordinates of this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} by vx and vy respectively would cause a collision with the \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} other, this method returns a \char`\"{}time of impact\char`\"{} between 0 and 1, which is a scalar multiplier for vx and vy, giving the amount of safe movement until collision. It is zero if the two game objects are already overlapping, and moving by vx and vy would cause a worse overlap. In all other cases, the returned value is bigger than 1. If a time of impact below 1 is returned, the normal will be the collision normal (otherwise it is undefined). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a7cf0bc0d4a3023162ee55c99b7a50c96}{Move\+Until\+Collision}} (float vx, float vy, \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}\mbox{[}$\,$\mbox{]} objects\+To\+Check)
+\begin{DoxyCompactList}\small\item\em Tries to move this object by vx,vy (in parent space, similar to the translate method), until it collides with one of the given objects. In case of a collision, it returns a Collision object with information such as the normal and time of impact (the point and penetration depth fields of the collision object will always be zero). Otherwise it returns null. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a34a38604de1f8ef8d210846d2217f04a}{Move\+Until\+Collision}} (float vx, float vy)
+\begin{DoxyCompactList}\small\item\em Tries to move this object by vx,vy (in parent space, similar to the translate method), until it collides with another object. In case of a collision, it returns a Collision object with information such as the normal and time of impact (the point and penetration depth fields of the collision object will always be zero). Otherwise it returns null. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a88f5496a22c10886b22b283210eabd87}{Hit\+Test\+Point}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Returns {\ttfamily true} if a 2D point (given in global / screen space) overlaps with this object. You could use this for instance to check if the mouse (\mbox{\hyperlink{class_g_x_p_engine_1_1_input_a6bfaba5a35563f4e7de3e34d13bf609c}{Input.\+mouseX}}, \mbox{\hyperlink{class_g_x_p_engine_1_1_input_a23112cdee5c7b6a5cfa06708a5b453ec}{Input.\+mouseY}}) is over the object. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a749ca5e7b0beb2032a70e4fc38e7382f}{Transform\+Point}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms a point from local to global space. If you insert a point relative to the object, it will return that same point relative to the game. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a99734fab6b98d0aa2210316e0d53f5fd}{Transform\+Direction}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms a direction vector from local to global space. If you insert a vector relative to the object, it will return that same vector relative to the game. Note\+: only scale and rotation information are taken into account, not translation (coordinates). \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a56d3c636d0031ca94e2f368c1a9f05a7}{Inverse\+Transform\+Point}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms the point from global into local space. If you insert a point relative to the game, it will return that same point relative to this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a0e2649738d1c6d96f65e28ee3ac7fb1a}{Inverse\+Transform\+Direction}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms the vector from global into local space. If you insert a vector relative to the game, it will return that same vector relative to this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}. Note\+: only scale and rotation information are taken into account, not translation (coordinates). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a393d51e2469ccd1e6081622205d3511f}\label{class_g_x_p_engine_1_1_game_object_a393d51e2469ccd1e6081622205d3511f}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a7d741d18ef07f35410faed27573d07a8}\label{class_g_x_p_engine_1_1_game_object_a7d741d18ef07f35410faed27573d07a8}} 
+string {\bfseries name}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a476a3f05199e8e0072eb7f6bf69dc6bc}\label{class_g_x_p_engine_1_1_game_object_a476a3f05199e8e0072eb7f6bf69dc6bc}} 
+bool {\bfseries visible} = true
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a8661d08cf5a831e3d5d0aadd9da968c4}{create\+Collider}} ()
+\begin{DoxyCompactList}\small\item\em Create and return a collider to use for this game object. Null is allowed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a6caddacdd1891663a09e04c0ab2e9acd}\label{class_g_x_p_engine_1_1_game_object_a6caddacdd1891663a09e04c0ab2e9acd}} 
+virtual void {\bfseries Render\+Self} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\item 
+virtual void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a7010eb7e2495dbcdfc93094176e04a00}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Subclasses can implement this method to clean up resources once on destruction. Will be called by the engine when the game object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a6e9027206845fe24b39063667d1fce25}{Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the index of this object in the parent\textquotesingle{}s hierarchy list. Returns -\/1 if no parent is defined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_abc3d336075846c0d7da574d8da439923}{game}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the game that this object belongs to. This is a unique instance throughout the runtime of the game. Use this to access the top of the displaylist hierarchy, and to retreive the width and height of the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a1c8179ef98737b6674a951ba78b91f1d}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the parent \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}. When the parent moves, this object moves along. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} is the base class for all display objects. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_ae06d36ed14650ce3a1037ae455d1b18d}\label{class_g_x_p_engine_1_1_game_object_ae06d36ed14650ce3a1037ae455d1b18d}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Game\+Object.\+Game\+Object (\begin{DoxyParamCaption}\item[{bool}]{add\+Collider = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{G\+X\+P\+Engine.\+Game\+Object}} class. Since Game\+Objects contain a display hierarchy, a \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} can be used as a container for other objects. Other objects can be added using child commands as Add\+Child. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em add\+Collider} & If {\ttfamily true}, then the virtual function create\+Collider will be called, which can be overridden to create a collider that will be added to the collision manager. \\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_ad213f53039f4a78d03e1e81d1b00ed55}\label{class_g_x_p_engine_1_1_game_object_ad213f53039f4a78d03e1e81d1b00ed55}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!AddChild@{AddChild}}
+\index{AddChild@{AddChild}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{AddChild()}{AddChild()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{child }\end{DoxyParamCaption})}
+
+
+
+Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child object to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a407f9f417afaef615fba9852c7c4121d}\label{class_g_x_p_engine_1_1_game_object_a407f9f417afaef615fba9852c7c4121d}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!AddChildAt@{AddChildAt}}
+\index{AddChildAt@{AddChildAt}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{AddChildAt()}{AddChildAt()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Add\+Child\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{child,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this object at an specified index. This will alter the position of other objects as well. You can use this to determine the draw order of child objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child object to add. \\
+\hline
+{\em index} & Index in the child list where the object should be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a8661d08cf5a831e3d5d0aadd9da968c4}\label{class_g_x_p_engine_1_1_game_object_a8661d08cf5a831e3d5d0aadd9da968c4}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!createCollider@{createCollider}}
+\index{createCollider@{createCollider}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{createCollider()}{createCollider()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collider}{Collider}} G\+X\+P\+Engine.\+Game\+Object.\+create\+Collider (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create and return a collider to use for this game object. Null is allowed. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_adbd7ebed1c5bc794e134ba914f37bfb6}{G\+X\+P\+Engine.\+Sprite}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_abf501534accfc6cb1295df5f0818b443}\label{class_g_x_p_engine_1_1_game_object_abf501534accfc6cb1295df5f0818b443}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily virtual void G\+X\+P\+Engine.\+Game\+Object.\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy this instance, and removes it from the game. To complete garbage collection, you must nullify all your own references to this object. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4763f40c236725a591e07f7e0ebfd264}{G\+X\+P\+Engine.\+Game}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a43e343df6e497131e64f9b755e7093f8}\label{class_g_x_p_engine_1_1_game_object_a43e343df6e497131e64f9b755e7093f8}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!GetChildren@{GetChildren}}
+\index{GetChildren@{GetChildren}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{GetChildren()}{GetChildren()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}$>$ G\+X\+P\+Engine.\+Game\+Object.\+Get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a list of all children that belong to this object. The function returns System.\+Collections.\+Generic.\+List$<$\+Game\+Object$>$. N\+O\+TE\+: Never change this list directly yourself! 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_aa55ad32321703f3226fcc601e7f28823}\label{class_g_x_p_engine_1_1_game_object_aa55ad32321703f3226fcc601e7f28823}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!GetCollisions@{GetCollisions}}
+\index{GetCollisions@{GetCollisions}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{GetCollisions()}{GetCollisions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} \mbox{[}$\,$\mbox{]} G\+X\+P\+Engine.\+Game\+Object.\+Get\+Collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all a list of all objects that currently overlap this one. Calling this method will test collisions between this object and all other colliders in the scene. It can be called mid-\/step and is included for convenience, not performance. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_ac512360126ccc3e0a34be7c884eb66fb}\label{class_g_x_p_engine_1_1_game_object_ac512360126ccc3e0a34be7c884eb66fb}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!HasChild@{HasChild}}
+\index{HasChild@{HasChild}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{HasChild()}{HasChild()}}
+{\footnotesize\ttfamily bool G\+X\+P\+Engine.\+Game\+Object.\+Has\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{game\+Object }\end{DoxyParamCaption})}
+
+
+
+Returns \textquotesingle{}true\textquotesingle{} if the specified object is a descendant of this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object} & The \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} that should be tested. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a2e79de9a6e6c3d8ef40e4e9d8183a5e5}\label{class_g_x_p_engine_1_1_game_object_a2e79de9a6e6c3d8ef40e4e9d8183a5e5}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!HitTest@{HitTest}}
+\index{HitTest@{HitTest}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{HitTest()}{HitTest()}}
+{\footnotesize\ttfamily virtual bool G\+X\+P\+Engine.\+Game\+Object.\+Hit\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Tests if this object overlaps with the one specified. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true}, if \textquotesingle{}this\textquotesingle{} overlaps with \textquotesingle{}other\textquotesingle{}. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other game object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a88f5496a22c10886b22b283210eabd87}\label{class_g_x_p_engine_1_1_game_object_a88f5496a22c10886b22b283210eabd87}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!HitTestPoint@{HitTestPoint}}
+\index{HitTestPoint@{HitTestPoint}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{HitTestPoint()}{HitTestPoint()}}
+{\footnotesize\ttfamily virtual bool G\+X\+P\+Engine.\+Game\+Object.\+Hit\+Test\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns {\ttfamily true} if a 2D point (given in global / screen space) overlaps with this object. You could use this for instance to check if the mouse (\mbox{\hyperlink{class_g_x_p_engine_1_1_input_a6bfaba5a35563f4e7de3e34d13bf609c}{Input.\+mouseX}}, \mbox{\hyperlink{class_g_x_p_engine_1_1_input_a23112cdee5c7b6a5cfa06708a5b453ec}{Input.\+mouseY}}) is over the object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate to test. \\
+\hline
+{\em y} & The y coordinate to test. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_ac86698b7fc977350b80ebfeabbf0f03a}\label{class_g_x_p_engine_1_1_game_object_ac86698b7fc977350b80ebfeabbf0f03a}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!InHierarchy@{InHierarchy}}
+\index{InHierarchy@{InHierarchy}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{InHierarchy()}{InHierarchy()}}
+{\footnotesize\ttfamily bool G\+X\+P\+Engine.\+Game\+Object.\+In\+Hierarchy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether this game object is currently active, or equivalently, a descendant of \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}}. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a0e2649738d1c6d96f65e28ee3ac7fb1a}\label{class_g_x_p_engine_1_1_game_object_a0e2649738d1c6d96f65e28ee3ac7fb1a}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!InverseTransformDirection@{InverseTransformDirection}}
+\index{InverseTransformDirection@{InverseTransformDirection}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{InverseTransformDirection()}{InverseTransformDirection()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Game\+Object.\+Inverse\+Transform\+Direction (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms the vector from global into local space. If you insert a vector relative to the game, it will return that same vector relative to this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}. Note\+: only scale and rotation information are taken into account, not translation (coordinates). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate to transform. \\
+\hline
+{\em y} & The y coordinate to transform. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a4f21f972dd76604f9dcf0c9d8756cf7f}{G\+X\+P\+Engine.\+Transformable}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a56d3c636d0031ca94e2f368c1a9f05a7}\label{class_g_x_p_engine_1_1_game_object_a56d3c636d0031ca94e2f368c1a9f05a7}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!InverseTransformPoint@{InverseTransformPoint}}
+\index{InverseTransformPoint@{InverseTransformPoint}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{InverseTransformPoint()}{InverseTransformPoint()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Game\+Object.\+Inverse\+Transform\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms the point from global into local space. If you insert a point relative to the game, it will return that same point relative to this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate to transform. \\
+\hline
+{\em y} & The y coordinate to transform. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a304e3841020c64ea07b21235b1642463}{G\+X\+P\+Engine.\+Transformable}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a386aa1012b728347832ff41b33961317}\label{class_g_x_p_engine_1_1_game_object_a386aa1012b728347832ff41b33961317}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!LateAddChild@{LateAddChild}}
+\index{LateAddChild@{LateAddChild}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{LateAddChild()}{LateAddChild()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Late\+Add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{child }\end{DoxyParamCaption})}
+
+
+
+Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this one, {\itshape after} finishing the current Update + On\+Collision loops. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child object to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_aea006c98b23ab199862b2369436a3f2e}\label{class_g_x_p_engine_1_1_game_object_aea006c98b23ab199862b2369436a3f2e}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!LateAddChildAt@{LateAddChildAt}}
+\index{LateAddChildAt@{LateAddChildAt}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{LateAddChildAt()}{LateAddChildAt()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Late\+Add\+Child\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{child,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Adds the specified \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} as a child to this one, at the specified index, {\itshape after} finishing the current Update + On\+Collision loops. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_ac6ee0a9675d1a13231d1e393fafe4ccc}\label{class_g_x_p_engine_1_1_game_object_ac6ee0a9675d1a13231d1e393fafe4ccc}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!LateDestroy@{LateDestroy}}
+\index{LateDestroy@{LateDestroy}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{LateDestroy()}{LateDestroy()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Late\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy this instance, and removes it from the game, {\itshape after} finishing the current Update + On\+Collision loops. To complete garbage collection, you must nullify all your own references to this object. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a09b4049293b0124024375e327de16bbf}\label{class_g_x_p_engine_1_1_game_object_a09b4049293b0124024375e327de16bbf}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!LateRemove@{LateRemove}}
+\index{LateRemove@{LateRemove}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{LateRemove()}{LateRemove()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Late\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} from the hierarchy, {\itshape after} finishing the current Update + On\+Collision loops. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a34a38604de1f8ef8d210846d2217f04a}\label{class_g_x_p_engine_1_1_game_object_a34a38604de1f8ef8d210846d2217f04a}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!MoveUntilCollision@{MoveUntilCollision}}
+\index{MoveUntilCollision@{MoveUntilCollision}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{MoveUntilCollision()}{MoveUntilCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} G\+X\+P\+Engine.\+Game\+Object.\+Move\+Until\+Collision (\begin{DoxyParamCaption}\item[{float}]{vx,  }\item[{float}]{vy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Tries to move this object by vx,vy (in parent space, similar to the translate method), until it collides with another object. In case of a collision, it returns a Collision object with information such as the normal and time of impact (the point and penetration depth fields of the collision object will always be zero). Otherwise it returns null. 
+
+Note\+: this is a very expensive method since it uses Get\+Collisions, and tunneling is possible since it uses discrete collision detection -\/ use with care.\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a7cf0bc0d4a3023162ee55c99b7a50c96}\label{class_g_x_p_engine_1_1_game_object_a7cf0bc0d4a3023162ee55c99b7a50c96}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!MoveUntilCollision@{MoveUntilCollision}}
+\index{MoveUntilCollision@{MoveUntilCollision}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{MoveUntilCollision()}{MoveUntilCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_collision}{Collision}} G\+X\+P\+Engine.\+Game\+Object.\+Move\+Until\+Collision (\begin{DoxyParamCaption}\item[{float}]{vx,  }\item[{float}]{vy,  }\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}\mbox{[}$\,$\mbox{]}}]{objects\+To\+Check }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Tries to move this object by vx,vy (in parent space, similar to the translate method), until it collides with one of the given objects. In case of a collision, it returns a Collision object with information such as the normal and time of impact (the point and penetration depth fields of the collision object will always be zero). Otherwise it returns null. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a7010eb7e2495dbcdfc93094176e04a00}\label{class_g_x_p_engine_1_1_game_object_a7010eb7e2495dbcdfc93094176e04a00}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily virtual void G\+X\+P\+Engine.\+Game\+Object.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses can implement this method to clean up resources once on destruction. Will be called by the engine when the game object is destroyed. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a904f0f96975bc4419fd1e52f1199b1e8}{G\+X\+P\+Engine.\+Sprite}}, and \mbox{\hyperlink{class_g_x_p_engine_1_1_camera_a61a8399010cf320ddeadc6bae0464277}{G\+X\+P\+Engine.\+Camera}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a2259fbe1fef900a7d5527da951934efa}\label{class_g_x_p_engine_1_1_game_object_a2259fbe1fef900a7d5527da951934efa}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!Remove@{Remove}}
+\index{Remove@{Remove}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} from the hierarchy (=sets the parent to null). 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a6dd2b18321681958c92110b4b6162efc}\label{class_g_x_p_engine_1_1_game_object_a6dd2b18321681958c92110b4b6162efc}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!RemoveChild@{RemoveChild}}
+\index{RemoveChild@{RemoveChild}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{RemoveChild()}{RemoveChild()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Remove\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{child }\end{DoxyParamCaption})}
+
+
+
+Removes the specified child \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} from this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child object to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a442d88867c7be365abe6d73f9de7b923}\label{class_g_x_p_engine_1_1_game_object_a442d88867c7be365abe6d73f9de7b923}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!Render@{Render}}
+\index{Render@{Render}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily virtual void G\+X\+P\+Engine.\+Game\+Object.\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}}}]{gl\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function is called by the renderer. You can override it to change this object\textquotesingle{}s rendering behaviour. When not inside the \mbox{\hyperlink{namespace_g_x_p_engine}{G\+X\+P\+Engine}} package, specify the parameter as \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+X\+P\+Engine.\+Core.\+G\+L\+Context}}. This function was made public to accomodate split screen rendering. Use Set\+View\+Port for that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gl\+Context} & Gl context, will be supplied by internal caller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a719c9ad1c9b37a46f261e98d8d4fb4f3}{G\+X\+P\+Engine.\+Game}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_aee5eda02a379782f6a1a6034c178fe71}\label{class_g_x_p_engine_1_1_game_object_aee5eda02a379782f6a1a6034c178fe71}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!SetChildIndex@{SetChildIndex}}
+\index{SetChildIndex@{SetChildIndex}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{SetChildIndex()}{SetChildIndex()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game\+Object.\+Set\+Child\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{child,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Inserts the specified object in this object\textquotesingle{}s child list at given location. This will alter the position of other objects as well. You can use this to determine the drawing order of child objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child} & Child. \\
+\hline
+{\em index} & Index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a74d97832cabf7232e1ab1ca865631256}\label{class_g_x_p_engine_1_1_game_object_a74d97832cabf7232e1ab1ca865631256}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!TimeOfImpact@{TimeOfImpact}}
+\index{TimeOfImpact@{TimeOfImpact}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{TimeOfImpact()}{TimeOfImpact()}}
+{\footnotesize\ttfamily virtual float G\+X\+P\+Engine.\+Game\+Object.\+Time\+Of\+Impact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{other,  }\item[{float}]{vx,  }\item[{float}]{vy,  }\item[{out \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}}}]{normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+If changing the x and y coordinates of this \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} by vx and vy respectively would cause a collision with the \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} other, this method returns a \char`\"{}time of impact\char`\"{} between 0 and 1, which is a scalar multiplier for vx and vy, giving the amount of safe movement until collision. It is zero if the two game objects are already overlapping, and moving by vx and vy would cause a worse overlap. In all other cases, the returned value is bigger than 1. If a time of impact below 1 is returned, the normal will be the collision normal (otherwise it is undefined). 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a99734fab6b98d0aa2210316e0d53f5fd}\label{class_g_x_p_engine_1_1_game_object_a99734fab6b98d0aa2210316e0d53f5fd}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!TransformDirection@{TransformDirection}}
+\index{TransformDirection@{TransformDirection}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{TransformDirection()}{TransformDirection()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Game\+Object.\+Transform\+Direction (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms a direction vector from local to global space. If you insert a vector relative to the object, it will return that same vector relative to the game. Note\+: only scale and rotation information are taken into account, not translation (coordinates). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate to transform. \\
+\hline
+{\em y} & The y coordinate to transform. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a61e67c44ee049e8da13ada057c8643aa}{G\+X\+P\+Engine.\+Transformable}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a749ca5e7b0beb2032a70e4fc38e7382f}\label{class_g_x_p_engine_1_1_game_object_a749ca5e7b0beb2032a70e4fc38e7382f}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!TransformPoint@{TransformPoint}}
+\index{TransformPoint@{TransformPoint}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{TransformPoint()}{TransformPoint()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Game\+Object.\+Transform\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms a point from local to global space. If you insert a point relative to the object, it will return that same point relative to the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate to transform. \\
+\hline
+{\em y} & The y coordinate to transform. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a87286aa8c7798447591917f1a20b0d0c}{G\+X\+P\+Engine.\+Transformable}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_abc3d336075846c0d7da574d8da439923}\label{class_g_x_p_engine_1_1_game_object_abc3d336075846c0d7da574d8da439923}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!game@{game}}
+\index{game@{game}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}} G\+X\+P\+Engine.\+Game\+Object.\+game\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the game that this object belongs to. This is a unique instance throughout the runtime of the game. Use this to access the top of the displaylist hierarchy, and to retreive the width and height of the screen. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a6e9027206845fe24b39063667d1fce25}\label{class_g_x_p_engine_1_1_game_object_a6e9027206845fe24b39063667d1fce25}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!Index@{Index}}
+\index{Index@{Index}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily int G\+X\+P\+Engine.\+Game\+Object.\+Index\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the index of this object in the parent\textquotesingle{}s hierarchy list. Returns -\/1 if no parent is defined. 
+
+The index. \mbox{\Hypertarget{class_g_x_p_engine_1_1_game_object_a1c8179ef98737b6674a951ba78b91f1d}\label{class_g_x_p_engine_1_1_game_object_a1c8179ef98737b6674a951ba78b91f1d}} 
+\index{GXPEngine.GameObject@{GXPEngine.GameObject}!parent@{parent}}
+\index{parent@{parent}!GXPEngine.GameObject@{GXPEngine.GameObject}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} G\+X\+P\+Engine.\+Game\+Object.\+parent\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the parent \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}. When the parent moves, this object moves along. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/Game\+Object.\+cs\end{DoxyCompactItemize}

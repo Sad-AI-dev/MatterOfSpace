@@ -1,0 +1,28 @@
+\hypertarget{class_tiled_map_parser_1_1_map_parser}{}\doxysection{Tiled\+Map\+Parser.\+Map\+Parser Class Reference}
+\label{class_tiled_map_parser_1_1_map_parser}\index{TiledMapParser.MapParser@{TiledMapParser.MapParser}}
+
+
+Call the method Map\+Parser.\+Read\+Map, with as argument a Tiled file exported as xml (file extension\+: .tmx), to get an object of type \mbox{\hyperlink{class_tiled_map_parser_1_1_map}{Map}}. This object, together with its nested objects, contains most of the information contained in the Tiled file.  
+
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_map_parser_a7ef02eeba7d36291c998cb60cd61608c}\label{class_tiled_map_parser_1_1_map_parser_a7ef02eeba7d36291c998cb60cd61608c}} 
+static \mbox{\hyperlink{class_tiled_map_parser_1_1_map}{Map}} {\bfseries Read\+Map} (string filename)
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_map_parser_a64edcc0bf692b80415c70128448bf901}\label{class_tiled_map_parser_1_1_map_parser_a64edcc0bf692b80415c70128448bf901}} 
+static void {\bfseries Write\+Map} (string filename, \mbox{\hyperlink{class_tiled_map_parser_1_1_map}{Map}} map)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Call the method Map\+Parser.\+Read\+Map, with as argument a Tiled file exported as xml (file extension\+: .tmx), to get an object of type \mbox{\hyperlink{class_tiled_map_parser_1_1_map}{Map}}. This object, together with its nested objects, contains most of the information contained in the Tiled file. 
+
+The nesting of objects mimics the structure of the Tiled file exactly. (For instance, a \mbox{\hyperlink{class_tiled_map_parser_1_1_map}{Map}} can contain multiple (tile) Layers, Objectgroup\+Layers, Image\+Layers, which all can have a \mbox{\hyperlink{class_tiled_map_parser_1_1_property_list}{Property\+List}}, etc.)
+
+You should extend this class yourself if you want to read more information from the Tiled file (such as tile rotations, geometry objects, ...). See \href{http://docs.mapeditor.org/en/stable/reference/tmx-map-format/}{\texttt{ http\+://docs.\+mapeditor.\+org/en/stable/reference/tmx-\/map-\/format/}} for details.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Add\+Ons/Tiled\+Map\+Parser.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\hypertarget{class_g_x_p_engine_1_1_mouse_handler}{}\doxysection{G\+X\+P\+Engine.\+Mouse\+Handler Class Reference}
+\label{class_g_x_p_engine_1_1_mouse_handler}\index{GXPEngine.MouseHandler@{GXPEngine.MouseHandler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a4c179d1e9acc900e3852f81b593de555}\label{class_g_x_p_engine_1_1_mouse_handler_a4c179d1e9acc900e3852f81b593de555}} 
+delegate void {\bfseries On\+Mouse\+Event} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} target, Mouse\+Event\+Type type)
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_mouse_handler_a530a314f0a34eda4b194967fc897a946}{Mouse\+Handler}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} target)
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_g_x_p_engine_1_1_mouse_handler}{Mouse\+Handler}} for the given target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a1fdc3fbb71ae6620d79e4cf21330fd2e}\label{class_g_x_p_engine_1_1_mouse_handler_a1fdc3fbb71ae6620d79e4cf21330fd2e}} 
+\mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} {\bfseries offset\+To\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_ace47c24b9588a4975b08a37cd9a07dc8}\label{class_g_x_p_engine_1_1_mouse_handler_ace47c24b9588a4975b08a37cd9a07dc8}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Down}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a84be74639f8350c79fe05f219a77acf6}\label{class_g_x_p_engine_1_1_mouse_handler_a84be74639f8350c79fe05f219a77acf6}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Down\+On\+Target}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a74334bfff190fa354a45b7b7bfc4effb}\label{class_g_x_p_engine_1_1_mouse_handler_a74334bfff190fa354a45b7b7bfc4effb}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Up}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a74c5f81627e6b6ee0ecf2af35affb591}\label{class_g_x_p_engine_1_1_mouse_handler_a74c5f81627e6b6ee0ecf2af35affb591}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Up\+On\+Target}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a786ad45c6bb33db233b02a235e8b02b0}\label{class_g_x_p_engine_1_1_mouse_handler_a786ad45c6bb33db233b02a235e8b02b0}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Move}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_aeeb2322b4cf65dfec69931a723e24fc4}\label{class_g_x_p_engine_1_1_mouse_handler_aeeb2322b4cf65dfec69931a723e24fc4}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Move\+On\+Target}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_aa578a44372b8987aa1fe3c221dacf529}\label{class_g_x_p_engine_1_1_mouse_handler_aa578a44372b8987aa1fe3c221dacf529}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Over\+Target}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a442e38b352a1e601b8c0f42d6df8009e}\label{class_g_x_p_engine_1_1_mouse_handler_a442e38b352a1e601b8c0f42d6df8009e}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Off\+Target}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a5527fef8c408db939116f56d9a2d50cd}\label{class_g_x_p_engine_1_1_mouse_handler_a5527fef8c408db939116f56d9a2d50cd}} 
+On\+Mouse\+Event {\bfseries On\+Mouse\+Click}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple \mbox{\hyperlink{class_g_x_p_engine_1_1_mouse_handler}{Mouse\+Handler}} interface between the \mbox{\hyperlink{class_g_x_p_engine_1_1_input}{Input}} class and your own code, that turns the \mbox{\hyperlink{class_g_x_p_engine_1_1_input_a6bfaba5a35563f4e7de3e34d13bf609c}{Input.\+mouseX}} \mbox{\hyperlink{class_g_x_p_engine_1_1_input_a23112cdee5c7b6a5cfa06708a5b453ec}{Input.\+mouseY}} into a more event based approach.
+
+Do not forget to unsubscribe manually from each event before you set the handler to null. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_mouse_handler_a530a314f0a34eda4b194967fc897a946}\label{class_g_x_p_engine_1_1_mouse_handler_a530a314f0a34eda4b194967fc897a946}} 
+\index{GXPEngine.MouseHandler@{GXPEngine.MouseHandler}!MouseHandler@{MouseHandler}}
+\index{MouseHandler@{MouseHandler}!GXPEngine.MouseHandler@{GXPEngine.MouseHandler}}
+\doxysubsubsection{\texorpdfstring{MouseHandler()}{MouseHandler()}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Mouse\+Handler.\+Mouse\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}}}]{target }\end{DoxyParamCaption})}
+
+
+
+Create a new \mbox{\hyperlink{class_g_x_p_engine_1_1_mouse_handler}{Mouse\+Handler}} for the given target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Utils/Mouse\+Handler.\+cs\end{DoxyCompactItemize}

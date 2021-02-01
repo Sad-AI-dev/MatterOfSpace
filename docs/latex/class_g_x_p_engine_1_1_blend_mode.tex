@@ -1,0 +1,92 @@
+\hypertarget{class_g_x_p_engine_1_1_blend_mode}{}\doxysection{G\+X\+P\+Engine.\+Blend\+Mode Class Reference}
+\label{class_g_x_p_engine_1_1_blend_mode}\index{GXPEngine.BlendMode@{GXPEngine.BlendMode}}
+
+
+Defines different Blend\+Modes, only two present now, but you can add your own.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_a520f969be3cbc0ad16a195ec5e340211}\label{class_g_x_p_engine_1_1_blend_mode_a520f969be3cbc0ad16a195ec5e340211}} 
+delegate void {\bfseries Action} ()
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_a12fc94be97854625c6d40a72b80706a7}\label{class_g_x_p_engine_1_1_blend_mode_a12fc94be97854625c6d40a72b80706a7}} 
+{\bfseries Blend\+Mode} (string p\+Label, Action p\+Enable)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_ac996bc8fd4ae037a18616835e95be6c2}\label{class_g_x_p_engine_1_1_blend_mode_ac996bc8fd4ae037a18616835e95be6c2}} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Action \mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode_a669a0114c4b9c228f6727fff749cb22f}{enable}}
+\begin{DoxyCompactList}\small\item\em This should point to an anonymous function updating the blendfunc \end{DoxyCompactList}\item 
+readonly string \mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode_added30d9372b25898e9d5ec997c24ceb}{label}}
+\begin{DoxyCompactList}\small\item\em A label for this blendmode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode}{Blend\+Mode}} {\bfseries N\+O\+R\+M\+AL}
+\item 
+static readonly \mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode}{Blend\+Mode}} {\bfseries M\+U\+L\+T\+I\+P\+LY}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines different Blend\+Modes, only two present now, but you can add your own. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_a669a0114c4b9c228f6727fff749cb22f}\label{class_g_x_p_engine_1_1_blend_mode_a669a0114c4b9c228f6727fff749cb22f}} 
+\index{GXPEngine.BlendMode@{GXPEngine.BlendMode}!enable@{enable}}
+\index{enable@{enable}!GXPEngine.BlendMode@{GXPEngine.BlendMode}}
+\doxysubsubsection{\texorpdfstring{enable}{enable}}
+{\footnotesize\ttfamily readonly Action G\+X\+P\+Engine.\+Blend\+Mode.\+enable}
+
+
+
+This should point to an anonymous function updating the blendfunc 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_added30d9372b25898e9d5ec997c24ceb}\label{class_g_x_p_engine_1_1_blend_mode_added30d9372b25898e9d5ec997c24ceb}} 
+\index{GXPEngine.BlendMode@{GXPEngine.BlendMode}!label@{label}}
+\index{label@{label}!GXPEngine.BlendMode@{GXPEngine.BlendMode}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily readonly string G\+X\+P\+Engine.\+Blend\+Mode.\+label}
+
+
+
+A label for this blendmode 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_a2f7d1bed2e37b628afece9e46aaec468}\label{class_g_x_p_engine_1_1_blend_mode_a2f7d1bed2e37b628afece9e46aaec468}} 
+\index{GXPEngine.BlendMode@{GXPEngine.BlendMode}!MULTIPLY@{MULTIPLY}}
+\index{MULTIPLY@{MULTIPLY}!GXPEngine.BlendMode@{GXPEngine.BlendMode}}
+\doxysubsubsection{\texorpdfstring{MULTIPLY}{MULTIPLY}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode}{Blend\+Mode}} G\+X\+P\+Engine.\+Blend\+Mode.\+M\+U\+L\+T\+I\+P\+LY\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} BlendMode (}
+\DoxyCodeLine{            \textcolor{stringliteral}{"Multiply"}, () => \{ GL.BlendFunc(GL.DST\_COLOR, GL.ZERO);    \}}
+\DoxyCodeLine{        )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_blend_mode_a2d63084f1efcdbd7b079459c59d88684}\label{class_g_x_p_engine_1_1_blend_mode_a2d63084f1efcdbd7b079459c59d88684}} 
+\index{GXPEngine.BlendMode@{GXPEngine.BlendMode}!NORMAL@{NORMAL}}
+\index{NORMAL@{NORMAL}!GXPEngine.BlendMode@{GXPEngine.BlendMode}}
+\doxysubsubsection{\texorpdfstring{NORMAL}{NORMAL}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_g_x_p_engine_1_1_blend_mode}{Blend\+Mode}} G\+X\+P\+Engine.\+Blend\+Mode.\+N\+O\+R\+M\+AL\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} BlendMode (}
+\DoxyCodeLine{            \textcolor{stringliteral}{"Normal"}, () => \{   GL.BlendFunc(GL.SRC\_ALPHA, GL.ONE\_MINUS\_SRC\_ALPHA); \}}
+\DoxyCodeLine{        )}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Core/Blend\+Mode.\+cs\end{DoxyCompactItemize}

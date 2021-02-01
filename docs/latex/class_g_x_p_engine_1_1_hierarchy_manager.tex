@@ -1,0 +1,44 @@
+\hypertarget{class_g_x_p_engine_1_1_hierarchy_manager}{}\doxysection{G\+X\+P\+Engine.\+Hierarchy\+Manager Class Reference}
+\label{class_g_x_p_engine_1_1_hierarchy_manager}\index{GXPEngine.HierarchyManager@{GXPEngine.HierarchyManager}}
+
+
+If you are getting strange bugs because you are calling Destroy during the Update loop, you can use this class to do this more cleanly\+: when using Hierarchy\+Manager.\+Instance.\+Late\+Destroy, all these hierarchy changes will be made after the update loop is finished. Similarly, you can use Hierarchy\+Manager.\+Instance.\+Late\+Call to postpone a certain method call until after the update loop.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_a8aea3feba012d689d1aa52e8caed63d7}\label{class_g_x_p_engine_1_1_hierarchy_manager_a8aea3feba012d689d1aa52e8caed63d7}} 
+void {\bfseries Late\+Add} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} parent, \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} child, int index=-\/1)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_a98b52b2a2fe24487d4d0183069b67775}\label{class_g_x_p_engine_1_1_hierarchy_manager_a98b52b2a2fe24487d4d0183069b67775}} 
+void {\bfseries Late\+Destroy} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} obj)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_a9ba84c2906765581b55e92c755a317ce}\label{class_g_x_p_engine_1_1_hierarchy_manager_a9ba84c2906765581b55e92c755a317ce}} 
+void {\bfseries Late\+Remove} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} obj)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_a884989e8a494394d98b16df4d19983ca}\label{class_g_x_p_engine_1_1_hierarchy_manager_a884989e8a494394d98b16df4d19983ca}} 
+bool {\bfseries Is\+On\+Destroy\+List} (\mbox{\hyperlink{class_g_x_p_engine_1_1_game_object}{Game\+Object}} obj)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_aa894b87714af94d28171d0f135fd9fc5}\label{class_g_x_p_engine_1_1_hierarchy_manager_aa894b87714af94d28171d0f135fd9fc5}} 
+void {\bfseries Late\+Call} (Action meth)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_a7d6229b4debeabe13ae56bb52c8644e5}\label{class_g_x_p_engine_1_1_hierarchy_manager_a7d6229b4debeabe13ae56bb52c8644e5}} 
+void {\bfseries Update\+Hierarchy} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_hierarchy_manager_a834b7f828da89d9dfbd82bc97564f281}\label{class_g_x_p_engine_1_1_hierarchy_manager_a834b7f828da89d9dfbd82bc97564f281}} 
+static \mbox{\hyperlink{class_g_x_p_engine_1_1_hierarchy_manager}{Hierarchy\+Manager}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+If you are getting strange bugs because you are calling Destroy during the Update loop, you can use this class to do this more cleanly\+: when using Hierarchy\+Manager.\+Instance.\+Late\+Destroy, all these hierarchy changes will be made after the update loop is finished. Similarly, you can use Hierarchy\+Manager.\+Instance.\+Late\+Call to postpone a certain method call until after the update loop. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Add\+Ons/Hierarchy\+Manager.\+cs\end{DoxyCompactItemize}

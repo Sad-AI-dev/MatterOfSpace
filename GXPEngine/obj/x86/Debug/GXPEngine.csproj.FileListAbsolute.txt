@@ -1,0 +1,5 @@
+D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\Files\GXPEngine.exe
+D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\Files\GXPEngine.pdb
+D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\obj\x86\Debug\GXPEngine.exe
+D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\obj\x86\Debug\GXPEngine.pdb

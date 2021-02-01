@@ -1,0 +1,54 @@
+\hypertarget{class_tiled_map_parser_1_1_layer}{}\doxysection{Tiled\+Map\+Parser.\+Layer Class Reference}
+\label{class_tiled_map_parser_1_1_layer}\index{TiledMapParser.Layer@{TiledMapParser.Layer}}
+Inheritance diagram for Tiled\+Map\+Parser.\+Layer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tiled_map_parser_1_1_layer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_layer_a1b94f8560063a0f0437db070ad8a6726}\label{class_tiled_map_parser_1_1_layer_a1b94f8560063a0f0437db070ad8a6726}} 
+override string {\bfseries To\+String} ()
+\item 
+short\mbox{[},\mbox{]} \mbox{\hyperlink{class_tiled_map_parser_1_1_layer_a2b775e9647a97d1acec4901d37d1da9e}{Get\+Tile\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Returns the tile data from this layer as a 2-\/dimensional array of shorts. It\textquotesingle{}s a column-\/major array, so use \mbox{[}column,row\mbox{]} as indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_layer_aa6ae4e0b793766778338025be9b9e9f9}\label{class_tiled_map_parser_1_1_layer_aa6ae4e0b793766778338025be9b9e9f9}} 
+string {\bfseries Name}
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_layer_a39e43b303d7579265bd29cdf1d3bc763}\label{class_tiled_map_parser_1_1_layer_a39e43b303d7579265bd29cdf1d3bc763}} 
+int {\bfseries Width}
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_layer_a3261f4323243567ae360792993c7cb60}\label{class_tiled_map_parser_1_1_layer_a3261f4323243567ae360792993c7cb60}} 
+int {\bfseries Height}
+\item 
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_layer_ae61048b501ecd02910fbc8f3a1568fe5}\label{class_tiled_map_parser_1_1_layer_ae61048b501ecd02910fbc8f3a1568fe5}} 
+\mbox{\hyperlink{class_tiled_map_parser_1_1_data}{Data}} {\bfseries Data}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tiled_map_parser_1_1_layer_a2b775e9647a97d1acec4901d37d1da9e}\label{class_tiled_map_parser_1_1_layer_a2b775e9647a97d1acec4901d37d1da9e}} 
+\index{TiledMapParser.Layer@{TiledMapParser.Layer}!GetTileArray@{GetTileArray}}
+\index{GetTileArray@{GetTileArray}!TiledMapParser.Layer@{TiledMapParser.Layer}}
+\doxysubsubsection{\texorpdfstring{GetTileArray()}{GetTileArray()}}
+{\footnotesize\ttfamily short \mbox{[},\mbox{]} Tiled\+Map\+Parser.\+Layer.\+Get\+Tile\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the tile data from this layer as a 2-\/dimensional array of shorts. It\textquotesingle{}s a column-\/major array, so use \mbox{[}column,row\mbox{]} as indices. 
+
+This method does a lot of string parsing and memory allocation, so use it only once, during level loading.
+
+\begin{DoxyReturn}{Returns}
+The tile array.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Add\+Ons/Tiled\+Map\+Parser.\+cs\end{DoxyCompactItemize}

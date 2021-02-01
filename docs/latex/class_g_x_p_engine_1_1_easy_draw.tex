@@ -1,0 +1,164 @@
+\hypertarget{class_g_x_p_engine_1_1_easy_draw}{}\doxysection{G\+X\+P\+Engine.\+Easy\+Draw Class Reference}
+\label{class_g_x_p_engine_1_1_easy_draw}\index{GXPEngine.EasyDraw@{GXPEngine.EasyDraw}}
+
+
+Creates an easy-\/to-\/use layer on top of .N\+ET\textquotesingle{}s System.\+Drawing methods. The A\+PI is inspired by Processing\+: internal states are maintained for font, fill/stroke color, etc., and everything works with simple methods that have many overloads.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Easy\+Draw\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_g_x_p_engine_1_1_easy_draw}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a28df5174fcd5af74ae054a8bda5469f5}\label{class_g_x_p_engine_1_1_easy_draw_a28df5174fcd5af74ae054a8bda5469f5}} 
+{\bfseries Easy\+Draw} (int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}}, bool add\+Collider=true)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_aaee2da650650b2473dc5c9bf69fb7260}\label{class_g_x_p_engine_1_1_easy_draw_aaee2da650650b2473dc5c9bf69fb7260}} 
+{\bfseries Easy\+Draw} (System.\+Drawing.\+Bitmap bitmap, bool add\+Collider=true)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_ae967789c684a0ec9b9bf46adbed98eef}\label{class_g_x_p_engine_1_1_easy_draw_ae967789c684a0ec9b9bf46adbed98eef}} 
+{\bfseries Easy\+Draw} (string filename, bool add\+Collider=true)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_adeb1018fe1fb87d47d62ff29df3b3f93}\label{class_g_x_p_engine_1_1_easy_draw_adeb1018fe1fb87d47d62ff29df3b3f93}} 
+void {\bfseries Text\+Font} (Font new\+Font)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a7ce3405fa244ee484b11388a76733034}\label{class_g_x_p_engine_1_1_easy_draw_a7ce3405fa244ee484b11388a76733034}} 
+void {\bfseries Text\+Font} (string font\+Name, float point\+Size, Font\+Style style=Font\+Style.\+Regular)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a6bc8b72e3e3229c356718a3335a9f3c6}\label{class_g_x_p_engine_1_1_easy_draw_a6bc8b72e3e3229c356718a3335a9f3c6}} 
+void {\bfseries Text\+Size} (float point\+Size)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a020af1afd568d655c23b4eb32e5dc71a}\label{class_g_x_p_engine_1_1_easy_draw_a020af1afd568d655c23b4eb32e5dc71a}} 
+void {\bfseries Text\+Align} (Center\+Mode horizontal, Center\+Mode vertical)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_aa9dce1b530e8ca07dd0f18d9c9f6ba82}\label{class_g_x_p_engine_1_1_easy_draw_aa9dce1b530e8ca07dd0f18d9c9f6ba82}} 
+void {\bfseries Shape\+Align} (Center\+Mode horizontal, Center\+Mode vertical)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a313b86181947ac143b84ba247f972a27}\label{class_g_x_p_engine_1_1_easy_draw_a313b86181947ac143b84ba247f972a27}} 
+void {\bfseries No\+Stroke} ()
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_ae5f4aba3780a814aae27a0c6907a4091}\label{class_g_x_p_engine_1_1_easy_draw_ae5f4aba3780a814aae27a0c6907a4091}} 
+void {\bfseries Stroke} (Color new\+Color, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}=255)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_aafc6682b40b8d3c410fa257a75d68b34}\label{class_g_x_p_engine_1_1_easy_draw_aafc6682b40b8d3c410fa257a75d68b34}} 
+void {\bfseries Stroke} (int gray\+Scale, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}=255)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a5c2af723f4b85ddbb73da103da07b8e3}\label{class_g_x_p_engine_1_1_easy_draw_a5c2af723f4b85ddbb73da103da07b8e3}} 
+void {\bfseries Stroke} (int red, int green, int blue, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}=255)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a396127155a404d67318a1fd03a0b82c0}\label{class_g_x_p_engine_1_1_easy_draw_a396127155a404d67318a1fd03a0b82c0}} 
+void {\bfseries Stroke\+Weight} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}})
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_aefe6c4cfa5e3951a30c52b1abbe5062c}\label{class_g_x_p_engine_1_1_easy_draw_aefe6c4cfa5e3951a30c52b1abbe5062c}} 
+void {\bfseries No\+Fill} ()
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a9f7918791c5e037d68e7b965cea711be}\label{class_g_x_p_engine_1_1_easy_draw_a9f7918791c5e037d68e7b965cea711be}} 
+void {\bfseries Fill} (Color new\+Color, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}=255)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a1c940ba0f4002a44af70ee146497a80b}\label{class_g_x_p_engine_1_1_easy_draw_a1c940ba0f4002a44af70ee146497a80b}} 
+void {\bfseries Fill} (int gray\+Scale, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}=255)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a311f44cd640ac195ecefdd39c82c643b}\label{class_g_x_p_engine_1_1_easy_draw_a311f44cd640ac195ecefdd39c82c643b}} 
+void {\bfseries Fill} (int red, int green, int blue, int \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a780d1b1a516887c7708188add3b23b2f}{alpha}}=255)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a3def47efab457df8da7e3b8499ee5b7d}\label{class_g_x_p_engine_1_1_easy_draw_a3def47efab457df8da7e3b8499ee5b7d}} 
+void {\bfseries Clear} (Color new\+Color)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a26a7a99d3a303f30b9e9476e4e4a81ff}\label{class_g_x_p_engine_1_1_easy_draw_a26a7a99d3a303f30b9e9476e4e4a81ff}} 
+void {\bfseries Clear} (int gray\+Scale)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a75482ad5128e160c9f0b6259c3acf81b}\label{class_g_x_p_engine_1_1_easy_draw_a75482ad5128e160c9f0b6259c3acf81b}} 
+void {\bfseries Clear} (int red, int green, int blue)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a8ced3c903c17d359130e8d3d6eae8773}\label{class_g_x_p_engine_1_1_easy_draw_a8ced3c903c17d359130e8d3d6eae8773}} 
+void {\bfseries Text} (string text, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a2787b2780a296c6b9a3fbcba377e7037}\label{class_g_x_p_engine_1_1_easy_draw_a2787b2780a296c6b9a3fbcba377e7037}} 
+float {\bfseries Text\+Width} (string text)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_ad45a6950b0d4c740740e7b089682ced6}\label{class_g_x_p_engine_1_1_easy_draw_ad45a6950b0d4c740740e7b089682ced6}} 
+float {\bfseries Text\+Height} (string text)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a16acb30077a25a76a15973bec4432ece}\label{class_g_x_p_engine_1_1_easy_draw_a16acb30077a25a76a15973bec4432ece}} 
+void {\bfseries Text\+Dimensions} (string text, out float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, out float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}})
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a10544cb506f44177992d499ff1bb851a}\label{class_g_x_p_engine_1_1_easy_draw_a10544cb506f44177992d499ff1bb851a}} 
+void {\bfseries Rect} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}})
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_ab0f2b4a5651922fd46be33a32f588a48}\label{class_g_x_p_engine_1_1_easy_draw_ab0f2b4a5651922fd46be33a32f588a48}} 
+void {\bfseries Ellipse} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}})
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_aac86976ccf0682306dc442dd55d703c4}\label{class_g_x_p_engine_1_1_easy_draw_aac86976ccf0682306dc442dd55d703c4}} 
+void {\bfseries Arc} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}}, float start\+Angle\+Degrees, float sweep\+Angle\+Degrees)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a81920814700b475d2a4222fccf634794}\label{class_g_x_p_engine_1_1_easy_draw_a81920814700b475d2a4222fccf634794}} 
+void {\bfseries Line} (float x1, float y1, float x2, float y2)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a0fe61c870ae73542d37b2677799042ff}\label{class_g_x_p_engine_1_1_easy_draw_a0fe61c870ae73542d37b2677799042ff}} 
+void {\bfseries Triangle} (float x1, float y1, float x2, float y2, float x3, float y3)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a33ef039d168b223a8972937ae2bae839}\label{class_g_x_p_engine_1_1_easy_draw_a33ef039d168b223a8972937ae2bae839}} 
+void {\bfseries Quad} (float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_aa0ddcccfbf8aa5d0ab1d7736816ccb49}\label{class_g_x_p_engine_1_1_easy_draw_aa0ddcccfbf8aa5d0ab1d7736816ccb49}} 
+void {\bfseries Polygon} (params float\mbox{[}$\,$\mbox{]} pt)
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a820126c88e62ffb28da9f8d47d6ee952}\label{class_g_x_p_engine_1_1_easy_draw_a820126c88e62ffb28da9f8d47d6ee952}} 
+void {\bfseries Polygon} (PointF\mbox{[}$\,$\mbox{]} pts)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a00c655cdb295701a49293fbcc64ff82e}\label{class_g_x_p_engine_1_1_easy_draw_a00c655cdb295701a49293fbcc64ff82e}} 
+Center\+Mode {\bfseries Horizontal\+Text\+Align} =Center\+Mode.\+Min
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a173edde3672e9417a46111ac48814c54}\label{class_g_x_p_engine_1_1_easy_draw_a173edde3672e9417a46111ac48814c54}} 
+Center\+Mode {\bfseries Vertical\+Text\+Align} =Center\+Mode.\+Max
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a34a7eab5bdeee91974428b951bd54481}\label{class_g_x_p_engine_1_1_easy_draw_a34a7eab5bdeee91974428b951bd54481}} 
+Center\+Mode {\bfseries Horizontal\+Shape\+Align} =Center\+Mode.\+Center
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a0067aa4379465d2adaa6c3244f955298}\label{class_g_x_p_engine_1_1_easy_draw_a0067aa4379465d2adaa6c3244f955298}} 
+Center\+Mode {\bfseries Vertical\+Shape\+Align} =Center\+Mode.\+Center
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a633a54af752a65dcf04247eb6aae6517}\label{class_g_x_p_engine_1_1_easy_draw_a633a54af752a65dcf04247eb6aae6517}} 
+void {\bfseries Shape\+Align} (ref float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, ref float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a6c1766de4d8d0b00dae6cadd5b577973}{width}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_sprite_a05746222e444c0ba1eb8992e92ea99df}{height}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a6c173ca7501d8e79725d7c4f5d7a748c}\label{class_g_x_p_engine_1_1_easy_draw_a6c173ca7501d8e79725d7c4f5d7a748c}} 
+bool {\bfseries \+\_\+stroke} =true
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_af632e440af90506ef6cfbd70efb8ace8}\label{class_g_x_p_engine_1_1_easy_draw_af632e440af90506ef6cfbd70efb8ace8}} 
+bool {\bfseries \+\_\+fill} =true
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a4f9d833e7afc6b631c1e7b94a6c8162e}\label{class_g_x_p_engine_1_1_easy_draw_a4f9d833e7afc6b631c1e7b94a6c8162e}} 
+Font {\bfseries font}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_af44865e5700ab3467dd1e0ec3b60645b}\label{class_g_x_p_engine_1_1_easy_draw_af44865e5700ab3467dd1e0ec3b60645b}} 
+Pen {\bfseries pen}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_easy_draw_a5dedaf1a3305e84834980c9571fa7118}\label{class_g_x_p_engine_1_1_easy_draw_a5dedaf1a3305e84834980c9571fa7118}} 
+Solid\+Brush {\bfseries brush}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates an easy-\/to-\/use layer on top of .N\+ET\textquotesingle{}s System.\+Drawing methods. The A\+PI is inspired by Processing\+: internal states are maintained for font, fill/stroke color, etc., and everything works with simple methods that have many overloads. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Add\+Ons/Easy\+Draw.\+cs\end{DoxyCompactItemize}

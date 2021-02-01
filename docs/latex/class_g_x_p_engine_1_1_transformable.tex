@@ -1,0 +1,369 @@
+\hypertarget{class_g_x_p_engine_1_1_transformable}{}\doxysection{G\+X\+P\+Engine.\+Transformable Class Reference}
+\label{class_g_x_p_engine_1_1_transformable}\index{GXPEngine.Transformable@{GXPEngine.Transformable}}
+
+
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} class contains all positional data of Game\+Objects.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Transformable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.163842cm]{class_g_x_p_engine_1_1_transformable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a21fbd124df79d5fda5b98c49251cbdab}{Set\+XY}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Sets the X and Y position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a304e3841020c64ea07b21235b1642463}{Inverse\+Transform\+Point}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms the point from the game\textquotesingle{}s global space to this object\textquotesingle{}s local space. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a4f21f972dd76604f9dcf0c9d8756cf7f}{Inverse\+Transform\+Direction}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms the direction vector (x,y) from the game\textquotesingle{}s global space to this object\textquotesingle{}s local space. This means that rotation and scaling is applied, but translation is not. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a916bfbb8d0f5313c3dac8120c1abb63c}{Distance\+To}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} other)
+\begin{DoxyCompactList}\small\item\em Returns the distance to another \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a87286aa8c7798447591917f1a20b0d0c}{Transform\+Point}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms the point from this object\textquotesingle{}s local space to the game\textquotesingle{}s global space. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a61e67c44ee049e8da13ada057c8643aa}{Transform\+Direction}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}})
+\begin{DoxyCompactList}\small\item\em Transforms a direction vector (x,y) from this object\textquotesingle{}s local space to the game\textquotesingle{}s global space. This means that rotation and scaling is applied, but translation is not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a23a7f952df8288e594d52ac5aa5be7eb}{Turn}} (float angle)
+\begin{DoxyCompactList}\small\item\em Turn the specified object with a certain angle in degrees. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a3c892a395ea391103413e59046242a17}{Move}} (float stepX, float stepY)
+\begin{DoxyCompactList}\small\item\em Move the object, based on its current rotation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a04e83b5d8974d541029c1ceada349173}{Translate}} (float stepX, float stepY)
+\begin{DoxyCompactList}\small\item\em Move the object, in world space. (Object rotation is ignored) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_ac1fb7cad30e47d512c6e7ceeb9ae4e80}{Set\+Scale\+XY}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_ae8467a6cf97a80d429641a3565846347}{scaleX}}, float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a9eca26b4d2a05a84bf058514178ac7b1}{scaleY}})
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s scaling \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aead4d1f0fd78242a91318599ebfc1908}{Set\+Scale\+XY}} (float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aecff1ea2c666c1c869099f5715ef80d2}{scale}})
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s scaling \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a88aaee3768b8a31a8e702e23493ab1f0}{Inverse}} ()
+\begin{DoxyCompactList}\small\item\em Returns the inverse matrix transformation, if it exists. (Use this e.\+g. for cameras used by sub windows) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float\mbox{[}$\,$\mbox{]} {\bfseries \+\_\+matrix}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_ab01322fa2e264b606f927d6c0d53ba5a}\label{class_g_x_p_engine_1_1_transformable_ab01322fa2e264b606f927d6c0d53ba5a}} 
+float {\bfseries \+\_\+rotation} = 0.\+0f
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_ab7cb773484eb0d04737afd2b014fe709}\label{class_g_x_p_engine_1_1_transformable_ab7cb773484eb0d04737afd2b014fe709}} 
+float {\bfseries \+\_\+scaleX} = 1.\+0f
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a96e46e6aa5512f6eeb9462e1d69f4dc4}\label{class_g_x_p_engine_1_1_transformable_a96e46e6aa5512f6eeb9462e1d69f4dc4}} 
+float {\bfseries \+\_\+scaleY} = 1.\+0f
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a319c8e2912916d9c88bd81db39db7344}{matrix}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the gameobject\textquotesingle{}s 4x4 matrix. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the x position. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the y position. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_ada9991b3de129aab7b679a9bc393e347}{rotation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets the object\textquotesingle{}s rotation in degrees. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_ae8467a6cf97a80d429641a3565846347}{scaleX}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s x-\/axis scale \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a9eca26b4d2a05a84bf058514178ac7b1}{scaleY}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s y-\/axis scale \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aecff1ea2c666c1c869099f5715ef80d2}{scale}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s x-\/axis and y-\/axis scale Note\+: This getter/setter is included for convenience only Reading this value will return scaleX, not scale\+Y!! \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} class contains all positional data of Game\+Objects. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a916bfbb8d0f5313c3dac8120c1abb63c}\label{class_g_x_p_engine_1_1_transformable_a916bfbb8d0f5313c3dac8120c1abb63c}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!DistanceTo@{DistanceTo}}
+\index{DistanceTo@{DistanceTo}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{DistanceTo()}{DistanceTo()}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+Distance\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Returns the distance to another \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a88aaee3768b8a31a8e702e23493ab1f0}\label{class_g_x_p_engine_1_1_transformable_a88aaee3768b8a31a8e702e23493ab1f0}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable}{Transformable}} G\+X\+P\+Engine.\+Transformable.\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the inverse matrix transformation, if it exists. (Use this e.\+g. for cameras used by sub windows) 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a4f21f972dd76604f9dcf0c9d8756cf7f}\label{class_g_x_p_engine_1_1_transformable_a4f21f972dd76604f9dcf0c9d8756cf7f}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!InverseTransformDirection@{InverseTransformDirection}}
+\index{InverseTransformDirection@{InverseTransformDirection}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{InverseTransformDirection()}{InverseTransformDirection()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Transformable.\+Inverse\+Transform\+Direction (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms the direction vector (x,y) from the game\textquotesingle{}s global space to this object\textquotesingle{}s local space. This means that rotation and scaling is applied, but translation is not. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a0e2649738d1c6d96f65e28ee3ac7fb1a}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a304e3841020c64ea07b21235b1642463}\label{class_g_x_p_engine_1_1_transformable_a304e3841020c64ea07b21235b1642463}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!InverseTransformPoint@{InverseTransformPoint}}
+\index{InverseTransformPoint@{InverseTransformPoint}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{InverseTransformPoint()}{InverseTransformPoint()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Transformable.\+Inverse\+Transform\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms the point from the game\textquotesingle{}s global space to this object\textquotesingle{}s local space. 
+
+\begin{DoxyReturn}{Returns}
+The point. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a56d3c636d0031ca94e2f368c1a9f05a7}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a3c892a395ea391103413e59046242a17}\label{class_g_x_p_engine_1_1_transformable_a3c892a395ea391103413e59046242a17}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!Move@{Move}}
+\index{Move@{Move}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Transformable.\+Move (\begin{DoxyParamCaption}\item[{float}]{stepX,  }\item[{float}]{stepY }\end{DoxyParamCaption})}
+
+
+
+Move the object, based on its current rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stepX} & Step x. \\
+\hline
+{\em stepY} & Step y. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_aead4d1f0fd78242a91318599ebfc1908}\label{class_g_x_p_engine_1_1_transformable_aead4d1f0fd78242a91318599ebfc1908}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!SetScaleXY@{SetScaleXY}}
+\index{SetScaleXY@{SetScaleXY}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{SetScaleXY()}{SetScaleXY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Transformable.\+Set\+Scale\+XY (\begin{DoxyParamCaption}\item[{float}]{scale }\end{DoxyParamCaption})}
+
+
+
+Sets the object\textquotesingle{}s scaling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & Scale x and y. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_ac1fb7cad30e47d512c6e7ceeb9ae4e80}\label{class_g_x_p_engine_1_1_transformable_ac1fb7cad30e47d512c6e7ceeb9ae4e80}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!SetScaleXY@{SetScaleXY}}
+\index{SetScaleXY@{SetScaleXY}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{SetScaleXY()}{SetScaleXY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Transformable.\+Set\+Scale\+XY (\begin{DoxyParamCaption}\item[{float}]{scaleX,  }\item[{float}]{scaleY }\end{DoxyParamCaption})}
+
+
+
+Sets the object\textquotesingle{}s scaling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scaleX} & Scale x. \\
+\hline
+{\em scaleY} & Scale y. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a21fbd124df79d5fda5b98c49251cbdab}\label{class_g_x_p_engine_1_1_transformable_a21fbd124df79d5fda5b98c49251cbdab}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!SetXY@{SetXY}}
+\index{SetXY@{SetXY}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{SetXY()}{SetXY()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Transformable.\+Set\+XY (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Sets the X and Y position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a61e67c44ee049e8da13ada057c8643aa}\label{class_g_x_p_engine_1_1_transformable_a61e67c44ee049e8da13ada057c8643aa}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!TransformDirection@{TransformDirection}}
+\index{TransformDirection@{TransformDirection}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{TransformDirection()}{TransformDirection()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Transformable.\+Transform\+Direction (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms a direction vector (x,y) from this object\textquotesingle{}s local space to the game\textquotesingle{}s global space. This means that rotation and scaling is applied, but translation is not. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a99734fab6b98d0aa2210316e0d53f5fd}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a87286aa8c7798447591917f1a20b0d0c}\label{class_g_x_p_engine_1_1_transformable_a87286aa8c7798447591917f1a20b0d0c}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!TransformPoint@{TransformPoint}}
+\index{TransformPoint@{TransformPoint}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{TransformPoint()}{TransformPoint()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_vector2}{Vector2}} G\+X\+P\+Engine.\+Transformable.\+Transform\+Point (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Transforms the point from this object\textquotesingle{}s local space to the game\textquotesingle{}s global space. 
+
+\begin{DoxyReturn}{Returns}
+The point. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a749ca5e7b0beb2032a70e4fc38e7382f}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a04e83b5d8974d541029c1ceada349173}\label{class_g_x_p_engine_1_1_transformable_a04e83b5d8974d541029c1ceada349173}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!Translate@{Translate}}
+\index{Translate@{Translate}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Transformable.\+Translate (\begin{DoxyParamCaption}\item[{float}]{stepX,  }\item[{float}]{stepY }\end{DoxyParamCaption})}
+
+
+
+Move the object, in world space. (Object rotation is ignored) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stepX} & Step x. \\
+\hline
+{\em stepY} & Step y. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a23a7f952df8288e594d52ac5aa5be7eb}\label{class_g_x_p_engine_1_1_transformable_a23a7f952df8288e594d52ac5aa5be7eb}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!Turn@{Turn}}
+\index{Turn@{Turn}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{Turn()}{Turn()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Transformable.\+Turn (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Turn the specified object with a certain angle in degrees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Angle. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_af03035aea1fe1f0b1bce4e1886234b60}\label{class_g_x_p_engine_1_1_transformable_af03035aea1fe1f0b1bce4e1886234b60}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!\_matrix@{\_matrix}}
+\index{\_matrix@{\_matrix}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{\_matrix}{\_matrix}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} G\+X\+P\+Engine.\+Transformable.\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} \textcolor{keywordtype}{float}[16] \{ }
+\DoxyCodeLine{            1.0f, 0.0f, 0.0f, 0.0f,}
+\DoxyCodeLine{            0.0f, 1.0f, 0.0f, 0.0f,}
+\DoxyCodeLine{            0.0f, 0.0f, 1.0f, 0.0f,}
+\DoxyCodeLine{            0.0f, 0.0f, 0.0f, 1.0f \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a319c8e2912916d9c88bd81db39db7344}\label{class_g_x_p_engine_1_1_transformable_a319c8e2912916d9c88bd81db39db7344}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!matrix@{matrix}}
+\index{matrix@{matrix}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily float \mbox{[}$\,$\mbox{]} G\+X\+P\+Engine.\+Transformable.\+matrix\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the gameobject\textquotesingle{}s 4x4 matrix. 
+
+The matrix. \mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_ada9991b3de129aab7b679a9bc393e347}\label{class_g_x_p_engine_1_1_transformable_ada9991b3de129aab7b679a9bc393e347}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!rotation@{rotation}}
+\index{rotation@{rotation}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+rotation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the object\textquotesingle{}s rotation in degrees. 
+
+The rotation. \mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_aecff1ea2c666c1c869099f5715ef80d2}\label{class_g_x_p_engine_1_1_transformable_aecff1ea2c666c1c869099f5715ef80d2}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!scale@{scale}}
+\index{scale@{scale}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+scale\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sets the object\textquotesingle{}s x-\/axis and y-\/axis scale Note\+: This getter/setter is included for convenience only Reading this value will return scaleX, not scale\+Y!! 
+
+The scale. \mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_ae8467a6cf97a80d429641a3565846347}\label{class_g_x_p_engine_1_1_transformable_ae8467a6cf97a80d429641a3565846347}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!scaleX@{scaleX}}
+\index{scaleX@{scaleX}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{scaleX}{scaleX}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+scaleX\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sets the object\textquotesingle{}s x-\/axis scale 
+
+The scale x. \mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a9eca26b4d2a05a84bf058514178ac7b1}\label{class_g_x_p_engine_1_1_transformable_a9eca26b4d2a05a84bf058514178ac7b1}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!scaleY@{scaleY}}
+\index{scaleY@{scaleY}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{scaleY}{scaleY}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+scaleY\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sets the object\textquotesingle{}s y-\/axis scale 
+
+The scale y. \mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}\label{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!x@{x}}
+\index{x@{x}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+x\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the x position. 
+
+The x. \mbox{\Hypertarget{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}\label{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}} 
+\index{GXPEngine.Transformable@{GXPEngine.Transformable}!y@{y}}
+\index{y@{y}!GXPEngine.Transformable@{GXPEngine.Transformable}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float G\+X\+P\+Engine.\+Transformable.\+y\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets the y position. 
+
+The y. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Core/Transformable.\+cs\end{DoxyCompactItemize}

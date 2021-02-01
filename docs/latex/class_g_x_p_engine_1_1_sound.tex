@@ -1,0 +1,68 @@
+\hypertarget{class_g_x_p_engine_1_1_sound}{}\doxysection{G\+X\+P\+Engine.\+Sound Class Reference}
+\label{class_g_x_p_engine_1_1_sound}\index{GXPEngine.Sound@{GXPEngine.Sound}}
+
+
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{Sound}} Class represents a \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{Sound}} resource in memory You can load .mp3, .ogg or .wav  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_sound_a0f1aaede78ecba23937a82ed53272197}{Sound}} (String filename, bool looping=false, bool streaming=false)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{G\+X\+P\+Engine.\+Sound}}. This class represents a sound file. \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{Sound}} files are loaded into memory unless you set them to \textquotesingle{}streamed\textquotesingle{}. An optional parameter allows you to create a looping sound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_sound_channel}{Sound\+Channel}} \mbox{\hyperlink{class_g_x_p_engine_1_1_sound_a27c5d494b7ba0c7215c6d0224913c873}{Play}} (bool paused=false, int channel\+Id=-\/1)
+\begin{DoxyCompactList}\small\item\em Play the specified paused and return the newly created \mbox{\hyperlink{class_g_x_p_engine_1_1_sound_channel}{Sound\+Channel}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{Sound}} Class represents a \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{Sound}} resource in memory You can load .mp3, .ogg or .wav 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sound_a0f1aaede78ecba23937a82ed53272197}\label{class_g_x_p_engine_1_1_sound_a0f1aaede78ecba23937a82ed53272197}} 
+\index{GXPEngine.Sound@{GXPEngine.Sound}!Sound@{Sound}}
+\index{Sound@{Sound}!GXPEngine.Sound@{GXPEngine.Sound}}
+\doxysubsubsection{\texorpdfstring{Sound()}{Sound()}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Sound.\+Sound (\begin{DoxyParamCaption}\item[{String}]{filename,  }\item[{bool}]{looping = {\ttfamily false},  }\item[{bool}]{streaming = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates a new \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{G\+X\+P\+Engine.\+Sound}}. This class represents a sound file. \mbox{\hyperlink{class_g_x_p_engine_1_1_sound}{Sound}} files are loaded into memory unless you set them to \textquotesingle{}streamed\textquotesingle{}. An optional parameter allows you to create a looping sound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Filename, should include path and extension. \\
+\hline
+{\em looping} & If set to {\ttfamily true} the sound file repeats itself. (It loops) \\
+\hline
+{\em streaming} & If set to {\ttfamily true}, the file will be streamed rather than loaded into memory. \\
+\hline
+{\em cached} & If set to {\ttfamily true}, the sound will be stored in cache, preserving memory when creating the same sound multiple times. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_sound_a27c5d494b7ba0c7215c6d0224913c873}\label{class_g_x_p_engine_1_1_sound_a27c5d494b7ba0c7215c6d0224913c873}} 
+\index{GXPEngine.Sound@{GXPEngine.Sound}!Play@{Play}}
+\index{Play@{Play}!GXPEngine.Sound@{GXPEngine.Sound}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_sound_channel}{Sound\+Channel}} G\+X\+P\+Engine.\+Sound.\+Play (\begin{DoxyParamCaption}\item[{bool}]{paused = {\ttfamily false},  }\item[{int}]{channel\+Id = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Play the specified paused and return the newly created \mbox{\hyperlink{class_g_x_p_engine_1_1_sound_channel}{Sound\+Channel}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paused} & When set to {\ttfamily true}, the sound is set up, but remains paused. You can use this to set frequency, panning and volume before playing the sound. \\
+\hline
+{\em channel\+Id} & When in range 0...31, the selected channel will be used. If it already contains a playing sound, that sound will be stopped. When set to -\/1 (the default), the next free channel will be used. However, when all channels are in use, \mbox{\hyperlink{class_g_x_p_engine_1_1_sound_a27c5d494b7ba0c7215c6d0224913c873}{Sound.\+Play}} will silently fail. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/Sound.\+cs\end{DoxyCompactItemize}

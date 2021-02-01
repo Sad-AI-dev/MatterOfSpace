@@ -1,0 +1,289 @@
+\hypertarget{class_g_x_p_engine_1_1_game}{}\doxysection{G\+X\+P\+Engine.\+Game Class Reference}
+\label{class_g_x_p_engine_1_1_game}\index{GXPEngine.Game@{GXPEngine.Game}}
+
+
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}} class represents the \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}} window. Only a single instance of this class is allowed.  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_g_x_p_engine_1_1_game}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}{Step\+Delegate}} ()
+\begin{DoxyCompactList}\small\item\em Step delegate defines the signature of a method used for step callbacks, see On\+Before\+Step, On\+After\+Step. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a7f79e91eddcc16269d152c75007d6b4a}\label{class_g_x_p_engine_1_1_game_a7f79e91eddcc16269d152c75007d6b4a}} 
+delegate void {\bfseries Render\+Delegate} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_a05983f154cc746b90c676e2f81b488a0}{Game}} (int p\+Width, int p\+Height, bool p\+Full\+Screen, bool p\+V\+Sync=true, int p\+Real\+Width=-\/1, int p\+Real\+Height=-\/1, bool p\+Pixel\+Art=false)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{G\+X\+P\+Engine.\+Game}} class. This class represents a game window, containing an open\+GL view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_afecde817f37c96e76d26593c7fcac853}{Set\+Viewport}} (int \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_a0b09ecd058e6652589ffbe867b2f36db}{x}}, int \mbox{\hyperlink{class_g_x_p_engine_1_1_transformable_aba60d8fdb719dc7c984dce8099ed5206}{y}}, int \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a0a659aa4d59ed3729fc5d255651aac26}{width}}, int \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a134c09653d9b6137a4762dc283a20883}{height}})
+\begin{DoxyCompactList}\small\item\em Sets the rendering output view port. All rendering will be done within the given rectangle. The default setting is \{0, 0, game.\+width, game.\+height\}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a2f0f1eb7d0ba0c275deaef45421b8544}{Show\+Mouse}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Shows or hides the mouse cursor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a60cfaccee44dd4badd8629bcd9936beb}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start the game loop. Call this once at the start of your game. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a719c9ad1c9b37a46f261e98d8d4fb4f3}{Render}} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\begin{DoxyCompactList}\small\item\em This function is called by the renderer. You can override it to change this object\textquotesingle{}s rendering behaviour. When not inside the \mbox{\hyperlink{namespace_g_x_p_engine}{G\+X\+P\+Engine}} package, specify the parameter as \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+X\+P\+Engine.\+Core.\+G\+L\+Context}}. This function was made public to accomodate split screen rendering. Use Set\+View\+Port for that. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4763f40c236725a591e07f7e0ebfd264}{Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the game, and closes the game window. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_g_x_p_engine_1_1_game_aa17a0f166621ac1e88f7abf51de41c90}{Get\+Diagnostics}} ()
+\begin{DoxyCompactList}\small\item\em Returns a string with some internal engine information. Use this for debugging, especially when the game slows down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a48096b919243880eacca09c31cf9bbc6}{Render\+Main}} = true
+\begin{DoxyCompactList}\small\item\em Set this to false if you {\itshape only} want to render using your own cameras. (Don\textquotesingle{}t say we didn\textquotesingle{}t warn you if you end up with a black screen...) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a56bede5208383bcaf8ef73cfa5caf9c6}\label{class_g_x_p_engine_1_1_game_a56bede5208383bcaf8ef73cfa5caf9c6}} 
+readonly bool {\bfseries Pixel\+Art}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a741e1ad53edfd4b48a0500f5e328b4ba}\label{class_g_x_p_engine_1_1_game_a741e1ad53edfd4b48a0500f5e328b4ba}} 
+override void {\bfseries Render\+Self} (\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}} gl\+Context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_rectangle}{Rectangle}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a7c90cb7f4df63b1fbc651c878caf7ddf}{Render\+Range}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sprites will be rendered if and only if they overlap with this rectangle. Default value\+: (0,0,game.\+width,game.\+height). You only need to change this when rendering to subwindows (e.\+g. split screen). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a0a659aa4d59ed3729fc5d255651aac26}{width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the width of the window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a134c09653d9b6137a4762dc283a20883}{height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the height of the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a689cb02d5dd37e307ea74816c15f0a59}\label{class_g_x_p_engine_1_1_game_a689cb02d5dd37e307ea74816c15f0a59}} 
+int {\bfseries current\+Fps}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a39f9746072c114772bfbc278d3af5d70}\label{class_g_x_p_engine_1_1_game_a39f9746072c114772bfbc278d3af5d70}} 
+int {\bfseries target\+Fps}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}{Step\+Delegate}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_ae93f01e15a6ff137b4c2aba5449987e5}{On\+Before\+Step}}
+\begin{DoxyCompactList}\small\item\em Occurs before the engine starts the new update loop. This allows you to define general manager classes that can update itself on/after each frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}{Step\+Delegate}} \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a21eda1f7129c978fa7f28cd502d7ae5f}{On\+After\+Step}}
+\begin{DoxyCompactList}\small\item\em Occurs after the engine has finished its last update loop. This allows you to define general manager classes that can update itself on/after each frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a5a3e69093d702335622c94d8550562d2}\label{class_g_x_p_engine_1_1_game_a5a3e69093d702335622c94d8550562d2}} 
+Render\+Delegate {\bfseries On\+After\+Render}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}} class represents the \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{Game}} window. Only a single instance of this class is allowed. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a05983f154cc746b90c676e2f81b488a0}\label{class_g_x_p_engine_1_1_game_a05983f154cc746b90c676e2f81b488a0}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!Game@{Game}}
+\index{Game@{Game}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Game.\+Game (\begin{DoxyParamCaption}\item[{int}]{p\+Width,  }\item[{int}]{p\+Height,  }\item[{bool}]{p\+Full\+Screen,  }\item[{bool}]{p\+V\+Sync = {\ttfamily true},  }\item[{int}]{p\+Real\+Width = {\ttfamily -\/1},  }\item[{int}]{p\+Real\+Height = {\ttfamily -\/1},  }\item[{bool}]{p\+Pixel\+Art = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_g_x_p_engine_1_1_game}{G\+X\+P\+Engine.\+Game}} class. This class represents a game window, containing an open\+GL view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the window in pixels. (As used by all the logic, e.\+g. the coordinate system) \\
+\hline
+{\em height} & Height of the window in pixels. (As used by all the logic, e.\+g. the coordinate system) \\
+\hline
+{\em full\+Screen} & If set to {\ttfamily true} the application will run in fullscreen mode. \\
+\hline
+{\em v\+Sync} & If {\ttfamily true}, the frame rate will sync to the screen refresh rate, so setting target\+Fps has no effect. (It\textquotesingle{}s best to give this the same value as the \textquotesingle{}full\+Screen\textquotesingle{} parameter.) \\
+\hline
+{\em real\+Width} & The actual window width. By default (if passing a negative value), this is equal to the \textquotesingle{}width\textquotesingle{} parameter, but using this parameter you can easily change the window width without having to change any other code. \\
+\hline
+{\em real\+Height} & The actual window height. By default (if passing a negative value), this is equal to the \textquotesingle{}height\textquotesingle{} parameter, but using this parameter you can easily change the window height without having to change any other code. \\
+\hline
+{\em pixel\+Art} & If {\ttfamily true}, textures will not be interpolated (\textquotesingle{}blurred\textquotesingle{}). This way, you can get a typical pixel art look. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a4763f40c236725a591e07f7e0ebfd264}\label{class_g_x_p_engine_1_1_game_a4763f40c236725a591e07f7e0ebfd264}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily override void G\+X\+P\+Engine.\+Game.\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroys the game, and closes the game window. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_abf501534accfc6cb1295df5f0818b443}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_aa17a0f166621ac1e88f7abf51de41c90}\label{class_g_x_p_engine_1_1_game_aa17a0f166621ac1e88f7abf51de41c90}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!GetDiagnostics@{GetDiagnostics}}
+\index{GetDiagnostics@{GetDiagnostics}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{GetDiagnostics()}{GetDiagnostics()}}
+{\footnotesize\ttfamily string G\+X\+P\+Engine.\+Game.\+Get\+Diagnostics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a string with some internal engine information. Use this for debugging, especially when the game slows down. 
+
+\begin{DoxyReturn}{Returns}
+Internal engine information.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a719c9ad1c9b37a46f261e98d8d4fb4f3}\label{class_g_x_p_engine_1_1_game_a719c9ad1c9b37a46f261e98d8d4fb4f3}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!Render@{Render}}
+\index{Render@{Render}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily override void G\+X\+P\+Engine.\+Game.\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+L\+Context}}}]{gl\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This function is called by the renderer. You can override it to change this object\textquotesingle{}s rendering behaviour. When not inside the \mbox{\hyperlink{namespace_g_x_p_engine}{G\+X\+P\+Engine}} package, specify the parameter as \mbox{\hyperlink{class_g_x_p_engine_1_1_core_1_1_g_l_context}{G\+X\+P\+Engine.\+Core.\+G\+L\+Context}}. This function was made public to accomodate split screen rendering. Use Set\+View\+Port for that. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gl\+Context} & Gl context, will be supplied by internal caller. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a442d88867c7be365abe6d73f9de7b923}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_afecde817f37c96e76d26593c7fcac853}\label{class_g_x_p_engine_1_1_game_afecde817f37c96e76d26593c7fcac853}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!SetViewport@{SetViewport}}
+\index{SetViewport@{SetViewport}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{SetViewport()}{SetViewport()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game.\+Set\+Viewport (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the rendering output view port. All rendering will be done within the given rectangle. The default setting is \{0, 0, game.\+width, game.\+height\}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x coordinate. \\
+\hline
+{\em y} & The y coordinate. \\
+\hline
+{\em width} & The new width of the viewport. \\
+\hline
+{\em height} & The new height of the viewport. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a2f0f1eb7d0ba0c275deaef45421b8544}\label{class_g_x_p_engine_1_1_game_a2f0f1eb7d0ba0c275deaef45421b8544}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!ShowMouse@{ShowMouse}}
+\index{ShowMouse@{ShowMouse}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{ShowMouse()}{ShowMouse()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game.\+Show\+Mouse (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Shows or hides the mouse cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & Set this to \textquotesingle{}true\textquotesingle{} to enable the cursor. Else, set this to \textquotesingle{}false\textquotesingle{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a60cfaccee44dd4badd8629bcd9936beb}\label{class_g_x_p_engine_1_1_game_a60cfaccee44dd4badd8629bcd9936beb}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!Start@{Start}}
+\index{Start@{Start}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void G\+X\+P\+Engine.\+Game.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the game loop. Call this once at the start of your game. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}\label{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!StepDelegate@{StepDelegate}}
+\index{StepDelegate@{StepDelegate}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{StepDelegate()}{StepDelegate()}}
+{\footnotesize\ttfamily delegate void G\+X\+P\+Engine.\+Game.\+Step\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Step delegate defines the signature of a method used for step callbacks, see On\+Before\+Step, On\+After\+Step. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a48096b919243880eacca09c31cf9bbc6}\label{class_g_x_p_engine_1_1_game_a48096b919243880eacca09c31cf9bbc6}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!RenderMain@{RenderMain}}
+\index{RenderMain@{RenderMain}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{RenderMain}{RenderMain}}
+{\footnotesize\ttfamily bool G\+X\+P\+Engine.\+Game.\+Render\+Main = true}
+
+
+
+Set this to false if you {\itshape only} want to render using your own cameras. (Don\textquotesingle{}t say we didn\textquotesingle{}t warn you if you end up with a black screen...) 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a134c09653d9b6137a4762dc283a20883}\label{class_g_x_p_engine_1_1_game_a134c09653d9b6137a4762dc283a20883}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!height@{height}}
+\index{height@{height}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int G\+X\+P\+Engine.\+Game.\+height\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the height of the window. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a7c90cb7f4df63b1fbc651c878caf7ddf}\label{class_g_x_p_engine_1_1_game_a7c90cb7f4df63b1fbc651c878caf7ddf}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!RenderRange@{RenderRange}}
+\index{RenderRange@{RenderRange}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{RenderRange}{RenderRange}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_x_p_engine_1_1_core_1_1_rectangle}{Rectangle}} G\+X\+P\+Engine.\+Game.\+Render\+Range\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Sprites will be rendered if and only if they overlap with this rectangle. Default value\+: (0,0,game.\+width,game.\+height). You only need to change this when rendering to subwindows (e.\+g. split screen). 
+
+The render range.\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a0a659aa4d59ed3729fc5d255651aac26}\label{class_g_x_p_engine_1_1_game_a0a659aa4d59ed3729fc5d255651aac26}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!width@{width}}
+\index{width@{width}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int G\+X\+P\+Engine.\+Game.\+width\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the width of the window. 
+
+
+
+\doxysubsection{Event Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_a21eda1f7129c978fa7f28cd502d7ae5f}\label{class_g_x_p_engine_1_1_game_a21eda1f7129c978fa7f28cd502d7ae5f}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!OnAfterStep@{OnAfterStep}}
+\index{OnAfterStep@{OnAfterStep}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{OnAfterStep}{OnAfterStep}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}{Step\+Delegate}} G\+X\+P\+Engine.\+Game.\+On\+After\+Step}
+
+
+
+Occurs after the engine has finished its last update loop. This allows you to define general manager classes that can update itself on/after each frame. 
+
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_game_ae93f01e15a6ff137b4c2aba5449987e5}\label{class_g_x_p_engine_1_1_game_ae93f01e15a6ff137b4c2aba5449987e5}} 
+\index{GXPEngine.Game@{GXPEngine.Game}!OnBeforeStep@{OnBeforeStep}}
+\index{OnBeforeStep@{OnBeforeStep}!GXPEngine.Game@{GXPEngine.Game}}
+\doxysubsubsection{\texorpdfstring{OnBeforeStep}{OnBeforeStep}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_x_p_engine_1_1_game_a4d1f2cf034dc8d50480f94ea0da11fb4}{Step\+Delegate}} G\+X\+P\+Engine.\+Game.\+On\+Before\+Step}
+
+
+
+Occurs before the engine starts the new update loop. This allows you to define general manager classes that can update itself on/after each frame. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/Game.\+cs\end{DoxyCompactItemize}

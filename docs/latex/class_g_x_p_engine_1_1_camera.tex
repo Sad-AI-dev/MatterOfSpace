@@ -1,0 +1,75 @@
+\hypertarget{class_g_x_p_engine_1_1_camera}{}\doxysection{G\+X\+P\+Engine.\+Camera Class Reference}
+\label{class_g_x_p_engine_1_1_camera}\index{GXPEngine.Camera@{GXPEngine.Camera}}
+
+
+A \mbox{\hyperlink{class_g_x_p_engine_1_1_camera}{Camera}} gameobject, that owns a rectangular render window, and determines the focal point, rotation and scale of what\textquotesingle{}s rendered in that window. (Don\textquotesingle{}t forget to add this as child somewhere in the hierarchy.)  
+
+
+Inheritance diagram for G\+X\+P\+Engine.\+Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_g_x_p_engine_1_1_camera}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_x_p_engine_1_1_camera_a2fd5a56a92bed8c01e017e00691197c1}{Camera}} (int windowX, int windowY, int window\+Width, int window\+Height)
+\begin{DoxyCompactList}\small\item\em Creates a camera game object and a sub window to render to. Add this camera as child to the object you want to follow, or update its coordinates directly in an update method. The scale of the camera determines the \char`\"{}zoom factor\char`\"{} (High scale = zoom out) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_g_x_p_engine_1_1_camera_a61a8399010cf320ddeadc6bae0464277}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Subclasses can implement this method to clean up resources once on destruction. Will be called by the engine when the game object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{class_g_x_p_engine_1_1_camera}{Camera}} gameobject, that owns a rectangular render window, and determines the focal point, rotation and scale of what\textquotesingle{}s rendered in that window. (Don\textquotesingle{}t forget to add this as child somewhere in the hierarchy.) 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_camera_a2fd5a56a92bed8c01e017e00691197c1}\label{class_g_x_p_engine_1_1_camera_a2fd5a56a92bed8c01e017e00691197c1}} 
+\index{GXPEngine.Camera@{GXPEngine.Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!GXPEngine.Camera@{GXPEngine.Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily G\+X\+P\+Engine.\+Camera.\+Camera (\begin{DoxyParamCaption}\item[{int}]{windowX,  }\item[{int}]{windowY,  }\item[{int}]{window\+Width,  }\item[{int}]{window\+Height }\end{DoxyParamCaption})}
+
+
+
+Creates a camera game object and a sub window to render to. Add this camera as child to the object you want to follow, or update its coordinates directly in an update method. The scale of the camera determines the \char`\"{}zoom factor\char`\"{} (High scale = zoom out) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em windowX} & Left x coordinate of the render window.\\
+\hline
+{\em windowY} & Top y coordinate of the render window.\\
+\hline
+{\em window\+Width} & Width of the render window.\\
+\hline
+{\em window\+Height} & Height of the render window.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_x_p_engine_1_1_camera_a61a8399010cf320ddeadc6bae0464277}\label{class_g_x_p_engine_1_1_camera_a61a8399010cf320ddeadc6bae0464277}} 
+\index{GXPEngine.Camera@{GXPEngine.Camera}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!GXPEngine.Camera@{GXPEngine.Camera}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily override void G\+X\+P\+Engine.\+Camera.\+On\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Subclasses can implement this method to clean up resources once on destruction. Will be called by the engine when the game object is destroyed. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_x_p_engine_1_1_game_object_a7010eb7e2495dbcdfc93094176e04a00}{G\+X\+P\+Engine.\+Game\+Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/bram/\+Desktop/\+Saxion/\+\_\+\+\_\+\+Game\+\_\+\+Programming/\+\_\+\+\_\+files/\+G\+X\+P\+Engine\+\_\+2019-\/2020/\+G\+X\+P\+Engine/\+G\+X\+P\+Engine/\+Add\+Ons/Camera.\+cs\end{DoxyCompactItemize}
