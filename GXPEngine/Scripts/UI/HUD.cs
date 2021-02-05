@@ -86,7 +86,7 @@ public class HUDGameOver : HUD
 {
     public HUDGameOver() : base()
     {
-        DrawGameOver();
+        new Timer(DrawGameOver, 30);
     }
 
     void DrawGameOver()
@@ -113,16 +113,12 @@ public class HUDGameOver : HUD
 public class HUDGamePlay : HUD
 {
     readonly private Font scoreFont;
-    readonly private StringFormat format;
 
     private List<Sprite> liveSprites;
 
     public HUDGamePlay() : base()
     {
         scoreFont = new Font(MyGame.fonts.Families[0], 30, FontStyle.Bold, GraphicsUnit.Point);
-        format = new StringFormat();
-        format.Alignment = StringAlignment.Center;
-        format.LineAlignment = StringAlignment.Center;
 
         MyGame.scenes.score = 0;
         MyGame.scenes.scoreUpdate += ScoreIncreaseEvent;
@@ -134,7 +130,7 @@ public class HUDGamePlay : HUD
     {
         //score text
         graphics.Clear(Color.Empty);
-        graphics.DrawString("Score: " + MyGame.scenes.score, scoreFont, Brushes.White, new Point(game.width/2, 50), format);
+        graphics.DrawString("Score: " + MyGame.scenes.score, scoreFont, Brushes.White, new Point(game.width/2, 50), centerFormat);
 
         if (MyGame.scenes.player.GetHealth() != liveSprites.Count + 1)
             UpdateHealth(); //draw appropiate amount of sprites for player lives
