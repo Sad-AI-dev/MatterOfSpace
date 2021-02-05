@@ -7,12 +7,17 @@ using GXPEngine;
 using GXPEngine.Core;
 public class HUD : Canvas
 {
-    readonly public StringFormat centerFormat;
+    readonly public StringFormat centerFormat, leftFormat;
     public HUD() : base(Game.main.width, Game.main.height)
     {
         centerFormat = new StringFormat()
         { //create text format
             Alignment = StringAlignment.Center,
+            LineAlignment = StringAlignment.Center
+        };
+        leftFormat = new StringFormat()
+        { //create left text format
+            Alignment = StringAlignment.Near,
             LineAlignment = StringAlignment.Center
         };
     }
@@ -33,6 +38,11 @@ public class HUD : Canvas
     {
         Font f = new Font(MyGame.fonts.Families[0], fontSize, FontStyle.Bold, GraphicsUnit.Point);
         graphics.DrawString(Text, f, Brushes.White, new Point((int)pos.x, (int)pos.y), centerFormat);
+    }
+    public void DrawText(string Text, Vector2 pos, int fontSize, StringFormat format)
+    {
+        Font f = new Font(MyGame.fonts.Families[0], fontSize, FontStyle.Bold, GraphicsUnit.Point);
+        graphics.DrawString(Text, f, Brushes.White, new Point((int)pos.x, (int)pos.y), format);
     }
     public void SetSprite(string file, Vector2 pos, Vector2 size)
     {
@@ -86,7 +96,7 @@ public class HUDGameOver : HUD
 {
     public HUDGameOver() : base()
     {
-        new Timer(DrawGameOver, 30);
+        new Timer(DrawGameOver, 60);
     }
 
     void DrawGameOver()
@@ -112,14 +122,10 @@ public class HUDGameOver : HUD
 
 public class HUDGamePlay : HUD
 {
-    readonly private Font scoreFont;
-
     private List<Sprite> liveSprites;
 
     public HUDGamePlay() : base()
     {
-        scoreFont = new Font(MyGame.fonts.Families[0], 30, FontStyle.Bold, GraphicsUnit.Point);
-
         MyGame.scenes.score = 0;
         MyGame.scenes.scoreUpdate += ScoreIncreaseEvent;
 
@@ -128,9 +134,12 @@ public class HUDGamePlay : HUD
 
     void Update()
     {
-        //score text
         graphics.Clear(Color.Empty);
-        graphics.DrawString("Score: " + MyGame.scenes.score, scoreFont, Brushes.White, new Point(game.width/2, 50), centerFormat);
+        //draw score text
+        DrawText("Score:", new Vector2(game.width * 0.01f, 80), 40, leftFormat);
+        DrawText(MyGame.scenes.score.ToString(), new Vector2(game.width * 0.01f, 140), 30, leftFormat);
+        //extra lives text
+        DrawText("Extra Lives", new Vector2(game.width * 0.01f, game.height * 0.40f), 25, leftFormat);
 
         if (MyGame.scenes.player.GetHealth() != liveSprites.Count + 1)
             UpdateHealth(); //draw appropiate amount of sprites for player lives
@@ -149,8 +158,8 @@ public class HUDGamePlay : HUD
         for (int i = 0; i < MyGame.scenes.player.GetHealth() - 1; i++)
         {
             Sprite sprite = new Sprite("extraLife.png", false, false);
-            sprite.SetScaleXY(4, 4);
-            sprite.SetXY(75 * i + 10, game.height - 80);
+            sprite.SetScaleXY(5.5f, 5.5f);
+            sprite.SetXY(40 + ((i%3) * 110), game.height * 0.45f + (90 * Mathf.Floor(i/3)));
             liveSprites.Add(sprite);
             AddChild(sprite);
         }

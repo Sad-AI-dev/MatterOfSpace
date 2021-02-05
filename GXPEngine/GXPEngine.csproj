@@ -86,6 +86,7 @@
     <Compile Include="Scripts\Entities\Projectiles\Beam.cs" />
     <Compile Include="Scripts\BG\BG.cs" />
     <Compile Include="Scripts\Entities\Projectiles\Bullet.cs" />
+    <Compile Include="Scripts\UI\Elements\BlinkText.cs" />
     <Compile Include="Scripts\UI\Elements\Button.cs" />
     <Compile Include="Scripts\Entities\Enemies\Enemy.cs" />
     <Compile Include="Scripts\Entities\Enemies\EnemyBlue.cs" />

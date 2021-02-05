@@ -9,6 +9,7 @@ public class SceneManager : GameObject
     private class Empty : GameObject { };
     public static GameObject rootObj;
     public Player player;
+    public HUD currentHUD;
 
     //score handling
     public int score = 0;
@@ -37,7 +38,8 @@ public class SceneManager : GameObject
         {
             case 0:
                 //load main menu
-                rootObj.LateAddChild(new HUDMainMenu());
+                currentHUD = new HUDMainMenu();
+                rootObj.LateAddChild(currentHUD);
                 break;
 
             case 1: //load gameplay screen
@@ -46,13 +48,15 @@ public class SceneManager : GameObject
 		        rootObj.LateAddChild(player);
                 //wave spawner
                 rootObj.LateAddChild(new WaveSpawner());
-		        //add UI overlay
-		        rootObj.LateAddChild(new HUDGamePlay());
+                //add UI overlay
+                currentHUD = new HUDGamePlay();
+		        rootObj.LateAddChild(currentHUD);
                 break;
 
             case 2:
                 //load game over screen
-                rootObj.LateAddChild(new HUDGameOver());
+                currentHUD = new HUDGameOver();
+                rootObj.LateAddChild(currentHUD);
                 break;
         }
     }

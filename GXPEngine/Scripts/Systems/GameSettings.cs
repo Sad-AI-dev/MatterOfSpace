@@ -12,8 +12,15 @@ public static class GameSettings
     //UI settings
     readonly public struct HUDSettings
     {
-        public const int FADE_TIME = 20;
-        public const int FADE_DELAY = 30;
+        readonly public struct FadeSettings
+        {
+            public const int FADE_TIME = 20;
+            public const int FADE_DELAY = 30;
+        }
+        readonly public struct BlinkSettings
+        {
+            public const int BLINK_COUNT = 6, BLINK_TIME = 25;
+        }
     }
 
     //settings for the player
@@ -41,7 +48,7 @@ public static class GameSettings
         public const int START_BUDGET = 20, BUDGET_SCALING = 10;
         public const float SCALING_INCREASE = 1.5f;
         public const int SCALING_INCREASE_DELAY = 5; //how many waves before scaling increase?
-        public const int WAVE_DELAY = 100;
+        public const int WAVE_DELAY = 300;
         //how many most expensive should spawner choose from
         public const int CHOICE_POOL = 3;
         //chace to replace enemy with green monster (1 in x)

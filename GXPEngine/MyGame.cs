@@ -9,7 +9,7 @@ public class MyGame : Game
 	public static SceneManager scenes;
 	public static Rectangle bounds;
 	public static PrivateFontCollection fonts;
-	public MyGame() : base(1920, 1800, true, true, -1, -1, true)
+	public MyGame() : base(1920, 1800, false, true, -1, -1, true)
 	{
 		ShowMouse(true);
 		targetFps = 60;

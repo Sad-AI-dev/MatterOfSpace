@@ -67,17 +67,26 @@ class WaveSpawner : GameObject
     {
         if (actives.Count <= 0) //no enemies left
         {
-            new Timer(SpawnWave, Setting.WAVE_DELAY);
-            new Timer(GiveWaveReward, 5);
+            if (round != 0)
+            {
+                new Timer(SpawnWave, Setting.WAVE_DELAY);
+                new Timer(GiveWaveReward, 5);
+                //add banner
+                new Timer(DrawBanner, 100);
+            }
+            else
+                new Timer(SpawnWave, 200);
         }
+    }
+    private void DrawBanner()
+    {
+        MyGame.scenes.currentHUD.LateAddChild(new BlinkText(40, new Vector2(game.width / 2, game.height * 0.2f), MyGame.scenes.currentHUD));
+        MyGame.PlaySFX("Sounds/waveIncoming.wav", 1.2f);
     }
 
     private void GiveWaveReward()
     { //give score bonus for clearing wave
-        if (round > 0)
-        {
-            MyGame.scenes.GainScore(100 * round, new Vector2(game.width / 2, game.height * 0.4f));
-        }
+        MyGame.scenes.GainScore(100 * round, new Vector2(game.width / 2, game.height * 0.4f));
     }
 
     private Vector2 GetRandomStartPos()

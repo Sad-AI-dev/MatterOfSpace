@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GXPEngine;
 using GXPEngine.Core;
-using Setting = GameSettings.HUDSettings;
+using Setting = GameSettings.HUDSettings.FadeSettings;
 class FadeText : GameObject
 {
     readonly private int fadeTime = Setting.FADE_TIME; 
