@@ -40,7 +40,9 @@ public static class GameSettings
         public const float SCALING_INCREASE = 1.5f;
         public const int SCALING_INCREASE_DELAY = 5; //how many waves before scaling increase?
         public const int WAVE_DELAY = 100;
-        //chace to replace enemy with green mon (1 in x)
+        //how many most expensive should spawner choose from
+        public const int CHOICE_POOL = 3;
+        //chace to replace enemy with green monster (1 in x)
         public const int GREEN_CHANCE = 3;
     }
 
@@ -88,5 +90,4 @@ public static class GameSettings
     {
         public const float GROW_SPEED = 0.4f;
     }
-
 }

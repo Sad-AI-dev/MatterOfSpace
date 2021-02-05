@@ -38,7 +38,7 @@ class WaveSpawner : GameObject
         //spawn enemies with new budget
         while (budget >= (int)Cost.red)
         {
-            SpawnEnemy(GetMostExpensive());
+            SpawnEnemy(GetRandomEntry(GetMostExpensives()));
         }
     }
 
@@ -86,19 +86,31 @@ class WaveSpawner : GameObject
         return pos;
     }
 
-    private string GetMostExpensive()
+    private List<string> GetMostExpensives()
     {
-        string expensive = "";
-        int max = 0;
+        List<int> expensives = new List<int>();
         foreach (int cost in Enum.GetValues(typeof(Cost)))
         {
-            if (cost > max && cost <= budget)
+            if (cost <= budget)
             {
-                max = cost;
-                expensive = Enum.GetName(typeof(Cost), cost);
+                expensives.Add(cost);
             }
         }
-        return expensive;
+        //sort List
+        expensives.Sort();
+        expensives.Reverse();
+        //choice pool
+        List<string> pool = new List<string>();
+        for (int i = 0; i < Setting.CHOICE_POOL; i++)
+        {
+            if (i < expensives.Count)
+                pool.Add(Enum.GetName(typeof(Cost), expensives[i]));
+        }
+        return pool;
+    }
+    private T GetRandomEntry<T>(List<T> list)
+    {
+        return list[Utils.Random(0, list.Count)];
     }
 
     private void SpawnEnemy(string type)
