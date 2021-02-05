@@ -14,7 +14,9 @@ class WaveSpawner : GameObject
     private enum Cost : int
     {
         red = Setting.Costs.red,
+        green = Setting.Costs.green,
         blue = Setting.Costs.blue,
+        green_cluster = Setting.Costs.green_cluster,
         red_cluster = Setting.Costs.red_cluster,
         blue_cluster = Setting.Costs.blue_cluster
     }
@@ -118,20 +120,16 @@ class WaveSpawner : GameObject
         switch(type)
         {
             case "red":
-                if (Utils.Random(0, Setting.GREEN_CHANCE) < 1)
-                {
-                    for (int i = 0; i < 2; i++) { SpawnGreen(); }
-                }
-                else
-                    SpawnRed();
+                SpawnRed();
+                break;
+            case "green":
+                for (int i = 0; i < 3; i++) { SpawnGreen(); }
                 break;
             case "blue":
-                if (Utils.Random(0, Setting.GREEN_CHANCE) < 1)
-                {
-                    for (int i = 0; i < 8; i++) { SpawnGreen(); }
-                }
-                else
-                    SpawnBlue();
+                SpawnBlue();
+                break;
+            case "green_cluster":
+                for (int i = 0; i < 12; i++) { SpawnGreen(); }
                 break;
             case "red_cluster":
                 //spawn cluster of 'red' type enemy

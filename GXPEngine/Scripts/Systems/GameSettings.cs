@@ -31,7 +31,9 @@ public static class GameSettings
         public enum Costs //cost of spawning enemy type
         {
             red = 10,
+            green = 20,
             blue = 40,
+            green_cluster = 100,
             red_cluster = 140,
             blue_cluster = 320
         }
