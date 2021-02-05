@@ -36,7 +36,7 @@ public class Bullet : Sprite
 
     private void BoundsCheck()
     { //destroy bullet if offscreen
-        if (x + width/2 < 0 || x - width/2 > game.width)
+        if (x + width/2 < MyGame.bounds.x || x - width/2 > MyGame.bounds.x + MyGame.bounds.width)
             LateDestroy();
         if (y + height / 2 < 0 || y - height / 2 > game.height)
             LateDestroy();

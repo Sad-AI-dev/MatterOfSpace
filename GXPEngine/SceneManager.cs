@@ -1,9 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using GXPEngine;
+using GXPEngine.Core;
 public class SceneManager : GameObject
 {
     private class Empty : GameObject { };
@@ -12,7 +12,7 @@ public class SceneManager : GameObject
 
     //score handling
     public int score = 0;
-    public Action<int> scoreUpdate;
+    public Action<int, Vector2> scoreUpdate;
 
     public SceneManager()
     {
@@ -37,7 +37,7 @@ public class SceneManager : GameObject
         {
             case 0:
                 //load main menu
-                rootObj.LateAddChild(new HUD(game.width, game.height, "mainMenu"));
+                rootObj.LateAddChild(new HUDMainMenu());
                 break;
 
             case 1: //load gameplay screen
@@ -47,19 +47,19 @@ public class SceneManager : GameObject
                 //wave spawner
                 rootObj.LateAddChild(new WaveSpawner());
 		        //add UI overlay
-		        rootObj.LateAddChild(new GamePlayHUD(game.width, game.height));
+		        rootObj.LateAddChild(new HUDGamePlay());
                 break;
 
             case 2:
                 //load game over screen
-                rootObj.LateAddChild(new HUD(game.width, game.height, "gameOver"));
+                rootObj.LateAddChild(new HUDGameOver());
                 break;
         }
     }
 
-    public void GainScore(int toGain)
+    public void GainScore(int toGain, Vector2 pos)
     {
         score += toGain;
-        scoreUpdate?.Invoke(toGain);
+        scoreUpdate?.Invoke(toGain, pos);
     }
 }

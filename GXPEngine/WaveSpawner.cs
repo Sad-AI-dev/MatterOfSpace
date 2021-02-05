@@ -74,14 +74,14 @@ class WaveSpawner : GameObject
     { //give score bonus for clearing wave
         if (round > 0)
         {
-            MyGame.scenes.GainScore(100 * round);
+            MyGame.scenes.GainScore(100 * round, new Vector2(game.width / 2, game.height * 0.4f));
         }
     }
 
     private Vector2 GetRandomStartPos()
     {
         Vector2 pos;
-        pos.x = Utils.Random(0, game.width);
+        pos.x = Utils.Random(MyGame.bounds.x, MyGame.bounds.x + MyGame.bounds.width);
         pos.y = Utils.Random(-game.height / 2, -50);
         return pos;
     }

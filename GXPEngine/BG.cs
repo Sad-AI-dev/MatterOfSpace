@@ -7,11 +7,11 @@ using GXPEngine.Core;
 public class BG : GameObject
 {
     public Rectangle spawnZone;
-    readonly private int starCount = 20;
+    readonly private int starCount = 40;
 
     public BG()
     {
-        spawnZone = new Rectangle(0, -Game.main.height * 0.3f, Game.main.width, Game.main.height * 0.2f);
+        spawnZone = new Rectangle(MyGame.bounds.x, -Game.main.height * 0.3f, MyGame.bounds.width, Game.main.height * 0.2f);
         for (int i = 0; i < starCount; i++)
         { //spawn background star
             Star star = new Star(ResetStar, spawnZone);

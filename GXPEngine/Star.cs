@@ -20,7 +20,7 @@ public class Star : Sprite
         rotation = Utils.Random(0, 360);
 
         resetEvent += reset;
-        resetEvent?.Invoke(this, new Rectangle(0, 0, game.width, game.height));
+        resetEvent?.Invoke(this, new Rectangle(MyGame.bounds.x, 0, MyGame.bounds.width, game.height));
     }
 
     void Update()

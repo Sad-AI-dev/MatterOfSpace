@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using GXPEngine;
+using GXPEngine.Core;
 public static class GameSettings
 {
     //general settings
@@ -11,7 +12,8 @@ public static class GameSettings
     //UI settings
     readonly public struct HUDSettings
     {
-        public const int FADE_TIME = 50;
+        public const int FADE_TIME = 20;
+        public const int FADE_DELAY = 30;
     }
 
     //settings for the player
@@ -19,7 +21,7 @@ public static class GameSettings
     {
         public const int LIVES = 3;
         public const int BORDER_OFFSET = 80;
-        public const float SPEED = 8f, MOVE_SMOOTHING = 0.85f;
+        public const float SPEED = 9f, MOVE_SMOOTHING = 0.85f;
         public const int FIRERATE = 10;
         public const int INVINCE_TIME = 60;
     }
@@ -53,7 +55,7 @@ public static class GameSettings
         readonly public struct Red //settings for 'red' type
         {
             public const int LIVES = 3, SCORE = 100;
-            public const float MOVE_SPEED = 1.5f;
+            public const float MOVE_SPEED = 1.6f;
             public const int ACT_TIME = 80, SHOTS_PER_MOVE = 2;
         }
         readonly public struct Blue //settings for 'blue' type
@@ -68,10 +70,10 @@ public static class GameSettings
         readonly public struct Green //settings for 'green' type
         {
             public const int LIVES = 2, SCORE = 50;
-            public const float MOVE_SPEED = 2.1f;
+            public const float MOVE_SPEED = 3.0f;
             public const int ACT_TIME = 20;
-            public const float MAX_SWAY = 0.8f, SWAY_SIZE = 0.2f; //how much the direction can change per update
-            public const float CHACE_RANGE = 300;
+            public const float MAX_SWAY = 0.8f, SWAY_SIZE = 0.4f; //how much the direction can change per update
+            public const float CHACE_RANGE = 400;
             //decrease drop chance
             public const int LIFE_DROP_CHANCE = 25;
         }

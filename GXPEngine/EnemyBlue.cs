@@ -32,7 +32,7 @@ public class EnemyBlue : Enemy
         stats.moveSpeed = Setting.MOVE_SPEED;
         stats.animated = true;
 
-        moveRect = new Rectangle(game.width * 0.05f, game.height * 0.05f, game.width * 0.95f, game.height * 0.3f);
+        moveRect = new Rectangle(MyGame.bounds.x + width, game.height * 0.05f, MyGame.bounds.width - (width * 2), game.height * 0.3f);
 
         //start AI
         SetAnimation();

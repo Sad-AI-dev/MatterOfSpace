@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using GXPEngine;
 using GXPEngine.Core;
-using Setting = GameSettings.EnemySettings;
+using Setting = GameSettings.EnemySettings.Red;
 public class EnemyRed : Enemy
 {
     readonly Timer AIUpdate;
     Vector2 moveDir;
     private int moveCounter = 0;
-    private readonly int flipDelay = Setting.Red.SHOTS_PER_MOVE;
+    private readonly int flipDelay = Setting.SHOTS_PER_MOVE;
     public EnemyRed(string fileName, Vector2 startPos, Action<Enemy> deathEvent) : base(fileName, new Vector2(3, 1), deathEvent)
     {
         SetOrigin(width / 2, height / 2);
@@ -18,21 +18,21 @@ public class EnemyRed : Enemy
         Spawn(startPos);
 
         //set health
-        healthManage = new HealthManager(Setting.Red.LIVES, CreateDeathEvent(), GotHurt, this);
+        healthManage = new HealthManager(Setting.LIVES, CreateDeathEvent(), GotHurt, this);
 
         //set stats
-        stats.reward = Setting.Red.SCORE;
-        stats.moveSpeed = Setting.Red.MOVE_SPEED;
+        stats.reward = Setting.SCORE;
+        stats.moveSpeed = Setting.MOVE_SPEED;
 
         //AI behaviour
         if (Utils.Random(0, 2) < 1)
-            moveDir = new Vector2(1f, 1f);
+            moveDir = new Vector2(1.2f, 1f);
         else
-            moveDir = new Vector2(-1f, 1f);
+            moveDir = new Vector2(-1.2f, 1f);
         moveDir.SetLength(stats.moveSpeed);
         //AI timer
-        AIUpdate = new Timer(TakeAction, Setting.Red.ACT_TIME, true);
-        AIUpdate.currentTime = Utils.Random(0, Setting.Red.ACT_TIME);
+        AIUpdate = new Timer(TakeAction, Setting.ACT_TIME, true);
+        AIUpdate.currentTime = Utils.Random(0, Setting.ACT_TIME);
     }
 
     void Update()

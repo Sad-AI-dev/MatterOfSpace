@@ -7,47 +7,58 @@ using GXPEngine;
 using GXPEngine.Core;
 public class HUD : Canvas
 {
-    readonly private StringFormat centerFormat;
-    public HUD(int sWidth, int sHeight, string type) : base(sWidth, sHeight)
+    readonly public StringFormat centerFormat;
+    public HUD() : base(Game.main.width, Game.main.height)
     {
-        centerFormat = new StringFormat();
-        centerFormat.Alignment = StringAlignment.Center;
-        centerFormat.LineAlignment = StringAlignment.Center;
-        //draw screen
-        CreateScreen(type);
+        centerFormat = new StringFormat()
+        { //create text format
+            Alignment = StringAlignment.Center,
+            LineAlignment = StringAlignment.Center
+        };
     }
 
-    void CreateScreen(string type)
-    {
-        switch(type)
-        {
-            case "mainMenu":
-                DrawMainMenu();
-                break;
-
-            case "gameOver":
-                Timer timer = new Timer(DrawGameOverMenu, 50);
-                break;
-        }
+    //generic draw functions
+    public void DrawButton(Action clickEvent, Vector2 pos, string text)
+    { //button template
+        AddChild(new Button(clickEvent, pos, new Vector2(10, 8), "Sounds/buttonConfirm.wav"));
+        DrawText(text, pos, 20);
     }
-    void DrawMainMenu()
+    public void DrawButton(Action clickEvent, Vector2 pos, string text, string sfxFile)
+    { //button template
+        AddChild(new Button(clickEvent, pos, new Vector2(10, 8), sfxFile));
+        DrawText(text, pos, 20);
+
+    }
+    public void DrawText(string Text, Vector2 pos, int fontSize)
     {
-        DrawText("a matter of space", new Vector2(game.width / 2, height * 0.1f), 50);
+        Font f = new Font(MyGame.fonts.Families[0], fontSize, FontStyle.Bold, GraphicsUnit.Point);
+        graphics.DrawString(Text, f, Brushes.White, new Point((int)pos.x, (int)pos.y), centerFormat);
+    }
+    public void SetSprite(string file, Vector2 pos, Vector2 size)
+    {
+        Sprite s = new Sprite(file, false, false);
+        s.SetOrigin(s.width / 2, s.height / 2); //center origin
+        s.SetScaleXY(size.x, size.y); //set size
+        s.SetXY(pos.x, pos.y); //set position
+        AddChild(s);
+    }
+}
+
+public class HUDMainMenu : HUD
+{
+    public HUDMainMenu() : base()
+    {
+        DrawMain();
+    }
+
+    void DrawMain()
+    {
+        DrawText("Matter of Space", new Vector2(game.width / 2, height * 0.1f), 50);
         //start game button
         DrawButton(Start, new Vector2(game.width / 2, game.height * 0.65f), "Start game");
         //quit game button
         DrawButton(Quit, new Vector2(game.width / 2, game.height * 0.8f), "Quit game");
         DrawTutorial();
-    }
-    void DrawGameOverMenu()
-    {
-        DrawText("Game Over", new Vector2(game.width / 2, game.height * 0.1f), 50);
-        //score banner
-        DrawText("your score: " + MyGame.scenes.score, new Vector2(game.width / 2, game.height * 0.2f), 50);
-        //replay game button
-        DrawButton(ReturnToMain, new Vector2(game.width / 2, game.height / 2 - 50), "Replay", "Sounds/buttonConfirm2.wav");
-        //quit game button
-        DrawButton(Quit, new Vector2(game.width / 2, game.height / 2 + 100), "Quit game");
     }
     void DrawTutorial()
     {
@@ -61,36 +72,34 @@ public class HUD : Canvas
         SetSprite("mouseClick.png", new Vector2(game.width * 0.66f, game.height * 0.38f), new Vector2(8, 8));
     }
 
-    //generic draw functions
-    void DrawButton(Action clickEvent, Vector2 pos, string text)
-    { //button template
-        AddChild(new Button(clickEvent, pos, new Vector2(10, 8), "Sounds/buttonConfirm.wav"));
-        DrawText(text, pos, 20);
-    }
-    void DrawButton(Action clickEvent, Vector2 pos, string text, string sfxFile)
-    { //button template
-        AddChild(new Button(clickEvent, pos, new Vector2(10, 8), sfxFile));
-        DrawText(text, pos, 20);
-
-    }
-    void DrawText(string Text, Vector2 pos, int fontSize)
-    {
-        Font f = new Font("Arial", fontSize, FontStyle.Bold, GraphicsUnit.Point);
-        graphics.DrawString(Text, f, Brushes.White, new Point((int)pos.x, (int)pos.y), centerFormat);
-    }
-    void SetSprite(string file, Vector2 pos, Vector2 size)
-    {
-        Sprite s = new Sprite(file, false, false);
-        s.SetOrigin(s.width / 2, s.height / 2); //center origin
-        s.SetScaleXY(size.x, size.y); //set size
-        s.SetXY(pos.x, pos.y); //set position
-        AddChild(s);
-    }
     //button functions
     void Start()
     {
         MyGame.scenes.LoadScene(1);
     }
+    void Quit()
+    {
+        Environment.Exit(1);
+    }
+}
+public class HUDGameOver : HUD
+{
+    public HUDGameOver() : base()
+    {
+        DrawGameOver();
+    }
+
+    void DrawGameOver()
+    {
+        DrawText("Game Over", new Vector2(game.width / 2, game.height * 0.1f), 50);
+        //score banner
+        DrawText("your score: " + MyGame.scenes.score, new Vector2(game.width / 2, game.height * 0.2f), 50);
+        //replay game button
+        DrawButton(ReturnToMain, new Vector2(game.width / 2, game.height / 2 - 50), "Replay", "Sounds/buttonConfirm2.wav");
+        //quit game button
+        DrawButton(Quit, new Vector2(game.width / 2, game.height / 2 + 100), "Quit game");
+    }
+    //button functions
     void ReturnToMain()
     {
         MyGame.scenes.LoadScene(0);
@@ -101,18 +110,16 @@ public class HUD : Canvas
     }
 }
 
-public class GamePlayHUD : Canvas
+public class HUDGamePlay : HUD
 {
     readonly private Font scoreFont;
     readonly private StringFormat format;
 
     private List<Sprite> liveSprites;
 
-    private List<FadeText> faders = new List<FadeText>();
-
-    public GamePlayHUD(int sWidth, int sHeight) : base(sWidth, sHeight)
+    public HUDGamePlay() : base()
     {
-        scoreFont = new Font("Arial", 30, FontStyle.Bold, GraphicsUnit.Point);
+        scoreFont = new Font(MyGame.fonts.Families[0], 30, FontStyle.Bold, GraphicsUnit.Point);
         format = new StringFormat();
         format.Alignment = StringAlignment.Center;
         format.LineAlignment = StringAlignment.Center;
@@ -130,28 +137,13 @@ public class GamePlayHUD : Canvas
         graphics.DrawString("Score: " + MyGame.scenes.score, scoreFont, Brushes.White, new Point(game.width/2, 50), format);
 
         if (MyGame.scenes.player.GetHealth() != liveSprites.Count + 1)
-        { //draw appropiate amount of sprites for player lives
-            UpdateHealth();
-        }
-
-        //draw fade texts
-        for (int i = 0; i < faders.Count; i++)
-        {
-            faders[i].DrawText(this, new Vector2(game.width / 2, game.height * 0.07f + (i * 40)));
-        }
+            UpdateHealth(); //draw appropiate amount of sprites for player lives
     }
 
-    private void ScoreIncreaseEvent(int gained)
+    private void ScoreIncreaseEvent(int gained, Vector2 pos)
     {
-        FadeText fader = new FadeText("+" + gained, EndFader);
-        faders.Add(fader);
+        FadeText fader = new FadeText(pos, "+" + gained, 25, this);
         LateAddChild(fader);
-    }
-
-    private void EndFader(FadeText fader)
-    {
-        faders.Remove(fader);
-        fader.LateDestroy();
     }
 
     private void UpdateHealth()
@@ -175,51 +167,5 @@ public class GamePlayHUD : Canvas
             sprit.Destroy();
         }
         liveSprites = new List<Sprite>();
-    }
-
-    private class FadeText : GameObject
-    {
-        readonly private int fadeTime = GameSettings.HUDSettings.FADE_TIME; 
-        private int timer = 0;
-        readonly private Action<FadeText> endEvent;
-
-        readonly private string text;
-        readonly private Font font;
-        readonly private StringFormat format;
-        private Color c;
-
-        public FadeText(string text, Action<FadeText> endEvent)
-        {
-            this.text = text;
-            this.endEvent = endEvent;
-            font = new Font("Arial", 25, FontStyle.Regular);
-            format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
-            //initialize color
-            c = Color.FromArgb(255, 255, 255, 255);
-        }
-
-        void Update()
-        {
-            UpdateColor();
-            timer++;
-        }
-
-        public void DrawText(Canvas can, Vector2 pos)
-        {
-            can.graphics.DrawString(text, font, new SolidBrush(c), new Point((int)pos.x, (int)pos.y), format);
-        }
-
-        void UpdateColor()
-        { //update color to create fade effect
-            if (timer >= fadeTime)
-            {
-                endEvent?.Invoke(this);
-            }
-            else
-            {
-                c = Color.FromArgb(Mathf.Floor(255f * ((fadeTime - timer)) / fadeTime), 255, 255, 255);
-            }
-        }
     }
 }

@@ -42,13 +42,13 @@ public class Enemy : AnimationSprite
             //reward player for quickly defeating enemy
             LosePoints();
         }
-        x = Mathf.Clamp(x, width, game.width - width);
+        x = Mathf.Clamp(x, MyGame.bounds.x + width, MyGame.bounds.x + MyGame.bounds.width - width);
     }
 
     public void DieGeneric()
     {
         deathEvent?.Invoke(this);
-        MyGame.scenes.GainScore(stats.reward);
+        MyGame.scenes.GainScore(stats.reward, new Vector2(x, y - (height / 2)));
         //chance to spawn health pickup
         if (Utils.Random(0, stats.dropChance) < 1)
         {

@@ -75,10 +75,10 @@ public class Player : Sprite
     private Vector2 GetMoveInput()
     {
         Vector2 toMove = new Vector2(0, 0);
-        if (Input.GetKey(Key.A) && x > borderOffset) { //left
+        if (Input.GetKey(Key.A) && x > MyGame.bounds.x + borderOffset) { //left
             toMove.x -= speed;
         }
-        if (Input.GetKey(Key.D) && x < game.width - borderOffset) { //right
+        if (Input.GetKey(Key.D) && x < (MyGame.bounds.x + MyGame.bounds.width) - borderOffset) { //right
             toMove.x += speed;
         }
         if (Input.GetKey(Key.W) && y > borderOffset) { //up
