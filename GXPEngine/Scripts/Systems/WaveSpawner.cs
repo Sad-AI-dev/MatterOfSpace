@@ -80,7 +80,7 @@ class WaveSpawner : GameObject
     }
     private void DrawBanner()
     {
-        MyGame.scenes.currentHUD.LateAddChild(new BlinkText(40, new Vector2(game.width / 2, game.height * 0.2f), MyGame.scenes.currentHUD));
+        MyGame.scenes.currentHUD.LateAddChild(new BlinkText("Wave Incoming", 40, new Vector2(game.width / 2, game.height * 0.2f), MyGame.scenes.currentHUD));
         MyGame.PlaySFX("Sounds/waveIncoming.wav", 1.2f);
     }
 

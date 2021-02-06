@@ -20,7 +20,6 @@ public class MyGame : Game
 		//build scene
 		scenes = new SceneManager();
     }
-
 	static void Main()
 	{
 		new MyGame().Start();

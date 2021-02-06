@@ -1,12 +1,7 @@
-D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\Files\GXPEngine.exe
-D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\Files\GXPEngine.pdb
-D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
-D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\obj\x86\Debug\GXPEngine.exe
-D:\important\Saxion\Y1\Q2\Game_Programming\Projects\test1\GXPEngine\obj\x86\Debug\GXPEngine.pdb
-D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
-D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache
 D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\Files\MatterOfSpace.exe.config
 D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\Files\MatterOfSpace.exe
 D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\Files\MatterOfSpace.pdb
+D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
 D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\obj\x86\Debug\MatterOfSpace.exe
 D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\obj\x86\Debug\MatterOfSpace.pdb
+D:\coding and stuff\GitStuff\GitFork\MatterOfSpace\GXPEngine\obj\x86\Debug\GXPEngine.csprojAssemblyReference.cache

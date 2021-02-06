@@ -22,6 +22,10 @@ public class Button : AnimationSprite
 
     void Update()
     {
+        ButtonUpdate();
+    }
+    public void ButtonUpdate()
+    {
         if (HitTestPoint(Input.mouseX, Input.mouseY))
             MouseCheck();
         else if (played)

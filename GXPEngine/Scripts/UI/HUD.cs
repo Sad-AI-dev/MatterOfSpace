@@ -32,7 +32,6 @@ public class HUD : Canvas
     { //button template
         AddChild(new Button(clickEvent, pos, new Vector2(10, 8), sfxFile));
         DrawText(text, pos, 20);
-
     }
     public void DrawText(string Text, Vector2 pos, int fontSize)
     {
@@ -143,6 +142,10 @@ public class HUDGamePlay : HUD
 
         if (MyGame.scenes.player.GetHealth() != liveSprites.Count + 1)
             UpdateHealth(); //draw appropiate amount of sprites for player lives
+
+        //pause
+        if (Input.GetKeyDown(Key.ESCAPE))
+            new HUDPause();
     }
 
     private void ScoreIncreaseEvent(int gained, Vector2 pos)
@@ -172,5 +175,61 @@ public class HUDGamePlay : HUD
             sprit.Destroy();
         }
         liveSprites = new List<Sprite>();
+    }
+}
+
+public class HUDPause : HUD
+{
+    readonly private Button unPause, toMain;
+    readonly private Color bgColor;
+    public HUDPause() : base()
+    {
+        Game.main.AddChild(this);
+        //instantiate elements
+        unPause = new Button(UnPause, new Vector2(game.width / 2, game.height * 0.6f), new Vector2(10, 8), "Sounds/buttonConfirm2.wav");
+        LateAddChild(unPause);
+        toMain = new Button(ToMain, new Vector2(game.width / 2, game.height * 0.75f), new Vector2(10, 8), "Sounds/buttonConfirm.wav");
+        LateAddChild(toMain);
+        //set bg color
+        bgColor = Color.FromArgb(120, 0, 0, 0);
+        //pause game
+        Pause();
+    }
+
+    private void Show()
+    {
+        DisplayUI();
+        GetInput();
+    }
+    private void DisplayUI()
+    {
+        graphics.Clear(bgColor);
+        DrawText("PAUSED", new Vector2(game.width / 2, game.height * 0.4f), 100);
+        unPause.ButtonUpdate();
+        DrawText("Resume", new Vector2(game.width / 2, game.height * 0.6f), 20);
+        toMain.ButtonUpdate();
+        DrawText("Main Menu", new Vector2(game.width / 2, game.height * 0.75f), 20);
+    }
+    private void GetInput()
+    {
+        if (Input.GetKeyDown(Key.ESCAPE))
+            UnPause();
+    }
+
+    private void Pause()
+    {
+        //pause game + update loop
+        Game.main.OnBeforeStep += Show;
+    }
+    private void UnPause()
+    {
+        Game.main.OnBeforeStep -= Show;
+        LateDestroy();
+    }
+
+    private void ToMain()
+    {
+        UnPause();
+        MyGame.scenes.LoadScene(0);
     }
 }

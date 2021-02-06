@@ -15,32 +15,65 @@ public class BlinkText : GameObject
     readonly private Font font;
     readonly private Vector2 displayPos;
 
-    readonly private int repeatCount = Setting.BLINK_COUNT;
+    readonly private string text;
+    readonly private bool infRepeat = false;
+
+    readonly private int repeatCount = Setting.BLINK_COUNT, blinkTime;
     private int blinkCount = 0;
     private bool invis = false;
     private Color c;
-    public BlinkText(int fontSize, Vector2 pos, Canvas displayTarget)
+
+    readonly public Timer timer;
+    public BlinkText(string text, int fontSize, Vector2 pos, Canvas displayTarget)
     {
         canvas = displayTarget;
         displayPos = pos;
+        this.text = text;
         format = new StringFormat
         {
             Alignment = StringAlignment.Center,
             LineAlignment = StringAlignment.Center
         };
+        //font & color
         font = new Font(MyGame.fonts.Families[0], fontSize, FontStyle.Bold, GraphicsUnit.Point);
         c = Color.FromArgb(175, 255, 255, 255);
-        new Timer(ToggleBlink, Setting.BLINK_TIME);
+        //set Timer
+        blinkTime = Setting.BLINK_TIME;
+        timer = new Timer(ToggleBlink, blinkTime);
+    }
+
+    public BlinkText(string text, int fontSize, Vector2 pos, Canvas displayTarget, bool infRepeat, int blinkTime)
+    {
+        canvas = displayTarget;
+        displayPos = pos;
+        this.text = text;
+        this.infRepeat = infRepeat;
+        format = new StringFormat
+        {
+            Alignment = StringAlignment.Center,
+            LineAlignment = StringAlignment.Center
+        };
+        //font & color
+        font = new Font(MyGame.fonts.Families[0], fontSize, FontStyle.Bold, GraphicsUnit.Point);
+        c = Color.FromArgb(175, 255, 255, 255);
+        //set timer
+        this.blinkTime = blinkTime;
+        timer = new Timer(ToggleBlink, blinkTime);
     }
 
     void Update()
     {
-        canvas.graphics.DrawString("Wave Incoming", font, new SolidBrush(c), new Point((int)displayPos.x, (int)displayPos.y), format);
+        DrawText();
+    }
+    public void DrawText()
+    {
+        canvas.graphics.DrawString(text, font, new SolidBrush(c), new Point((int)displayPos.x, (int)displayPos.y), format);
     }
 
     private void ToggleBlink()
     {
-        blinkCount++;
+        if (!infRepeat)
+            blinkCount++;
         invis = !invis;
         SetColor();
         BlinkUpdate();
@@ -55,7 +88,7 @@ public class BlinkText : GameObject
     private void BlinkUpdate()
     {
         if (blinkCount < repeatCount)
-            new Timer(ToggleBlink, Setting.BLINK_TIME);
+            new Timer(ToggleBlink, blinkTime);
         else
             LateDestroy();
     }

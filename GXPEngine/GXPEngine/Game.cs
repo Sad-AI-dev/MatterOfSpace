@@ -13,7 +13,7 @@ namespace GXPEngine
 	{
 		internal static Game main = null;
 
-		private GLContext _glContext;
+		public GLContext _glContext;
 
 		private UpdateManager _updateManager;
 		private CollisionManager _collisionManager;
@@ -179,9 +179,12 @@ namespace GXPEngine
 		internal void Step ()
 		{
 			if (OnBeforeStep != null)
-				OnBeforeStep ();
-			_updateManager.Step ();
-			_collisionManager.Step ();
+				OnBeforeStep();
+			else
+			{
+				_updateManager.Step();
+				_collisionManager.Step();
+			}
 			if (OnAfterStep != null)
 				OnAfterStep ();
 		}
